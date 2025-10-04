@@ -1,261 +1,163 @@
-<!--
-  Archivo: earth_viewer.html
-  Instrucciones:
-  1. Coloca este archivo en la misma carpeta que "earth.glb".
-  2. Abre este archivo en tu navegador (doble click) para ver el modelo 3D.
-  3. Si tu navegador bloquea recursos locales, sirve la carpeta con un servidor (por ejemplo: `python -m http.server 8000`) y abre http://localhost:8000
-  
-  Este archivo usa <model-viewer> cuando está disponible. Si el navegador NO soporta <model-viewer>, carga automáticamente
-  un visor alternativo basado en Three.js (GLTFLoader + OrbitControls) que también carga `earth.glb` desde la misma carpeta.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Visor 3D - Tierra (earth.glb)</title>
-
-  <!-- model-viewer: visor simple para glTF/glb -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-  <style>
-    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: #071029; color: #e6f0ff; }
-    .container { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; gap: 12px; padding: 18px; box-sizing: border-box; }
-    header { display:flex; gap:12px; align-items:center; }
-    header h1 { font-size: 1.1rem; margin: 0; }
-    .viewer-wrap { display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius: 12px; padding: 12px; }
-
-    model-viewer, #three-viewer { width: min(1100px, 100%); height: 70vh; border-radius: 10px; box-shadow: 0 8px 30px rgba(2,6,23,0.6); background: linear-gradient(180deg,#041024,#0b2743); display:block; }
-
-    footer { display:flex; gap:10px; align-items:center; justify-content:space-between; font-size:0.9rem; }
-    .controls { display:flex; gap:8px; }
-    button, a.button { background: #0b6ed1; color: white; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; text-decoration:none; }
-    button.secondary { background: transparent; border: 1px solid rgba(255,255,255,0.08); }
-    small.hint { opacity: 0.9 }
-
-    /* Mensaje de compatibilidad alternativa */
-    .fallback-msg { padding:16px; color:#ddd; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mundi 3D Interactivo con Puntos de Datos</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            background: white;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+            padding: 10px;
+        }
+        #country-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #country-list li {
+            padding: 5px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        #country-list li:hover {
+            background: #f0f0f0;
+        }
+        #country-list li.selected {
+            background: #007bff;
+            color: white;
+        }
+        #globeViz {
+            position: absolute;
+            left: 200px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+    <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Visor 3D — Tierra (earth.glb)</h1>
-      <small class="hint">Coloca <code>earth.glb</code> en la misma carpeta que este archivo.</small>
-    </header>
+    <div id="sidebar">
+        <h3>Selecciona un País</h3>
+        <ul id="country-list"></ul>
+    </div>
+    <div id="globeViz"></div>
 
-    <main class="viewer-wrap">
-      <!-- model-viewer (primario) -->
-      <model-viewer id="mv"
-                    src="tierra.glb"
-                    alt="Modelo 3D de la Tierra"
-                    camera-controls
-                    auto-rotate
-                    exposure="1.0"
-                    shadow-intensity="0.8"
-                    ar
-                    ar-modes="webxr scene-viewer quick-look">
-        <!-- Mensaje dentro de model-viewer para navegadores que muestren el elemento pero no lo puedan renderizar -->
-        <div class="fallback-msg">
-          El visor embed no puede renderizar <code>earth.glb</code> en este navegador. Debajo se activará un visor alternativo compatible (Three.js).
-        </div>
-      </model-viewer>
+    <script>
+        let selectedCountry = null;
+        const countryList = document.getElementById('country-list');
+        let countriesData = [];
+        let liMap = {};
+        let pointsData = [];
 
-      <!-- Contenedor alternativo para navegadores que NO soporten <model-viewer> -->
-      <div id="three-container" style="display:none; width:100%;">
-        <canvas id="three-viewer"></canvas>
-        <div style="position:relative;margin-top:8px;color:#ddd;">
-          <small>Visor alternativo (Three.js) — usa el ratón o el touch para rotar / acercar.</small>
-        </div>
-      </div>
-    </main>
+        const updateColors = () => feat => feat.properties.ADMIN === selectedCountry ? 'red' : 'rgba(0, 0, 255, 0.1)';
+        const updateAltitude = () => feat => feat.properties.ADMIN === selectedCountry ? 0.06 : 0.01;
 
-    <footer>
-      <div class="controls">
-        <button id="toggleRotate">Pausar rotación</button>
-        <button id="resetCam" class="secondary">Reset cámara</button>
-        <a id="download" class="button" href="earth.glb" download>Descargar .glb</a>
-      </div>
-      <div>
-        <small>Si el modelo no carga localmente, ejecuta: <code>python -m http.server</code></small>
-      </div>
-    </footer>
-  </div>
+        const world = Globe()(document.getElementById('globeViz'))
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+            .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+            .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
+            .polygonStrokeColor(() => '#111')
+            .polygonLabel(({ properties: d }) => `
+                <b>${d.ADMIN || d.name} (${d.ISO_A2 || d.iso_a2})</b>
+            `)
+            .onPolygonHover(hoverD => world
+                .polygonAltitude(hoverD ? 0.08 : updateAltitude())
+            )
+            .onPolygonClick(({ properties: d }) => selectCountry(d.ADMIN || d.name))
+            .polygonsTransitionDuration(0)
+            .polygonCapCurvatureResolution(3)
+            .pointColor(() => 'red')
+            .pointAltitude(0)
+            .pointRadius(0.05)
+            .pointLabel(d => `
+                <b>${d.name}</b><br>
+                País: ${d.country.name}<br>
+                Coordenadas: ${d.lat.toFixed(4)}, ${d.lng.toFixed(4)}<br>
+                Sensor: ${d.sensorName}
+            `)
+            .onPointClick(d => {
+                world.pointOfView({ lat: d.lat, lng: d.lng, altitude: 0.5 }, 1000);
+                alert(`Detalles del punto:\nNombre: ${d.name}\nPaís: ${d.country.name}\nSensor: ${d.sensorName}`);
+            })
+            .pointsTransitionDuration(0);
 
-  <!-- Si <model-viewer> no está disponible, cargamos Three.js y GLTFLoader para reproducir el modelo. -->
-  <script type="module">
-    // Determinamos si el navegador soporta el componente <model-viewer>
-    const mvElement = customElements.get('model-viewer');
-    const mv = document.getElementById('mv');
-    const threeContainer = document.getElementById('three-container');
-    const canvas = document.getElementById('three-viewer');
-    const toggleRotateBtn = document.getElementById('toggleRotate');
-    const resetCamBtn = document.getElementById('resetCam');
+        // Cargar GeoJSON de países
+        fetch('https://raw.githubusercontent.com/martynafford/natural-earth-geojson/master/110m/cultural/ne_110m_admin_0_countries.geojson')
+            .then(res => res.json())
+            .then(data => {
+                countriesData = data.features;
+                world.polygonsData(countriesData)
+                    .polygonCapColor(updateColors())
+                    .polygonAltitude(updateAltitude());
 
-    let threeState = null; // guardará { renderer, scene, camera, controls, mixer, clock, autoRotate }
+                const countryNames = countriesData.map(f => f.properties.ADMIN || f.properties.name).sort();
+                countryNames.forEach(name => {
+                    const li = document.createElement('li');
+                    li.textContent = name;
+                    li.onclick = () => selectCountry(name);
+                    countryList.appendChild(li);
+                    liMap[name] = li;
+                });
+            })
+            .catch(err => console.error('Error loading GeoJSON:', err));
 
-    function initThreeViewer() {
-      // Importamos módulos desde unpkg (ES modules)
-      Promise.all([
-        import('https://unpkg.com/three@0.152.2/build/three.module.js'),
-        import('https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js'),
-        import('https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js')
-      ]).then(([THREE, { GLTFLoader }, { OrbitControls }]) => {
-        // Renderer
-        const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-        renderer.setPixelRatio(window.devicePixelRatio || 1);
-        renderer.setSize(canvas.clientWidth || canvas.parentElement.clientWidth, canvas.clientHeight || (window.innerHeight * 0.7));
-        renderer.outputColorSpace = THREE.sRGBColorSpace || null;
+        // Cargar datos desde coordenadas.json
+        fetch('./coordenadas.json')
+            .then(res => res.json())
+            .then(jsonData => {
+                const results = jsonData.results || [];
+                pointsData = results.map(loc => ({
+                    lat: loc.coordinates.latitude,
+                    lng: loc.coordinates.longitude,
+                    name: loc.name,
+                    country: loc.country,
+                    sensorName: loc.sensors[0]?.parameter.displayName || 'N/A'
+                }));
+                world.pointsData(pointsData);
+                console.log(`Cargados ${pointsData.length} puntos de datos.`);
+            })
+            .catch(err => console.error('Error al cargar coordenadas.json:', err));
 
-        // Scene & Camera
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x041024);
+        function selectCountry(name) {
+            selectedCountry = name;
+            world
+                .polygonCapColor(updateColors())
+                .polygonAltitude(updateAltitude());
 
-        const camera = new THREE.PerspectiveCamera(50, (canvas.clientWidth || window.innerWidth) / (canvas.clientHeight || window.innerHeight * 0.7), 0.1, 1000);
-        camera.position.set(0, 0, 3);
+            Object.values(liMap).forEach(li => li.classList.remove('selected'));
+            if (liMap[name]) liMap[name].classList.add('selected');
 
-        // Lights
-        const hemi = new THREE.HemisphereLight(0xffffff, 0x444444, 0.6);
-        hemi.position.set(0, 1, 0);
-        scene.add(hemi);
-
-        const dir = new THREE.DirectionalLight(0xffffff, 0.9);
-        dir.position.set(5, 3, 5);
-        scene.add(dir);
-
-        // Controls
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.08;
-        controls.minDistance = 1.2;
-        controls.maxDistance = 10;
-
-        // GLTF Loader
-        const loader = new GLTFLoader();
-        const url = 'earth.glb';
-
-        const clock = new THREE.Clock();
-        let mixer = null;
-
-        loader.load(url, (gltf) => {
-          const root = gltf.scene || gltf.scenes[0];
-          // Ajustar tamaño si el modelo es grande/pequeño
-          root.position.set(0, 0, 0);
-
-          // calcular bounding box para ajustar cámara
-          const box = new THREE.Box3().setFromObject(root);
-          const size = box.getSize(new THREE.Vector3()).length();
-          const center = box.getCenter(new THREE.Vector3());
-
-          // normalizar escala si es necesario
-          const scaleFactor = 1 / size;
-          if (isFinite(scaleFactor) && scaleFactor > 0) root.scale.setScalar(scaleFactor);
-
-          scene.add(root);
-
-          // Si el glTF trae animaciones
-          if (gltf.animations && gltf.animations.length) {
-            mixer = new THREE.AnimationMixer(root);
-            gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
-          }
-
-          // Guardar estado
-          threeState = { renderer, scene, camera, controls, mixer, clock, autoRotate: true };
-
-          // Ajustar cámara para encuadrar
-          camera.lookAt(center.x, center.y, center.z);
-
-          animate();
-        }, (xhr) => {
-          // progreso opcional
-          // console.log('loading:', (xhr.loaded / xhr.total * 100).toFixed(0) + '%');
-        }, (err) => {
-          console.error('Error cargando glb:', err);
-          const msg = document.createElement('div');
-          msg.style.color = '#f88';
-          msg.style.padding = '12px';
-          msg.textContent = 'Error al cargar earth.glb. ¿Está en la misma carpeta y estás sirviendo archivos por HTTP?';
-          canvas.parentElement.appendChild(msg);
-        });
-
-        window.addEventListener('resize', () => {
-          if (!threeState) return;
-          const w = canvas.clientWidth || canvas.parentElement.clientWidth;
-          const h = canvas.clientHeight || Math.round(window.innerHeight * 0.7);
-          renderer.setSize(w, h);
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
-        });
-
-        function animate() {
-          if (!threeState) return;
-          requestAnimationFrame(animate);
-          const { renderer, scene, camera, controls, mixer, clock, autoRotate } = threeState;
-          const delta = clock.getDelta();
-          if (mixer) mixer.update(delta);
-          if (autoRotate) controls.autoRotate = true;
-          controls.update();
-          renderer.render(scene, camera);
+            const selectedFeat = countriesData.find(f => (f.properties.ADMIN || f.properties.name) === name);
+            if (selectedFeat) {
+                const centroid = getCentroid(selectedFeat.geometry);
+                world.pointOfView({ lat: centroid.lat, lng: centroid.lng, altitude: 1.5 }, 1000);
+            }
         }
 
-        // Botones
-        toggleRotateBtn.addEventListener('click', () => {
-          if (!threeState) return;
-          threeState.autoRotate = !threeState.autoRotate;
-          toggleRotateBtn.textContent = threeState.autoRotate ? 'Pausar rotación' : 'Iniciar rotación';
-        });
-
-        resetCamBtn.addEventListener('click', () => {
-          if (!threeState) return;
-          const { camera, controls } = threeState;
-          camera.position.set(0, 0, 3);
-          controls.target.set(0,0,0);
-          controls.update();
-        });
-
-      }).catch(err => {
-        console.error('Error cargando módulos Three.js:', err);
-        const msg = document.createElement('div');
-        msg.style.color = '#f88';
-        msg.style.padding = '12px';
-        msg.textContent = 'Error al cargar los módulos de Three.js desde CDN.';
-        canvas.parentElement.appendChild(msg);
-      });
-    }
-
-    // Si el navegador NO define <model-viewer>, mostramos el visor Three.js
-    if (!mvElement) {
-      mv.style.display = 'none';
-      threeContainer.style.display = 'block';
-      initThreeViewer();
-    } else {
-      // También comprobamos si model-viewer pudo cargar correctamente — si no, mostramos el fallback.
-      // Si model-viewer falla al renderizar, lo notificará internamente; aquí hacemos una comprobación simple: que el elemento tenga shadowRoot.
-      // En navegadores modernos model-viewer funciona bien; si deseas forzar Three.js, descomenta la línea siguiente:
-      // mv.style.display = 'none'; threeContainer.style.display = 'block'; initThreeViewer();
-
-      // Vincular botones para model-viewer
-      toggleRotateBtn.addEventListener('click', () => {
-        if (mv.hasAttribute('auto-rotate')) {
-          mv.removeAttribute('auto-rotate');
-          toggleRotateBtn.textContent = 'Iniciar rotación';
-        } else {
-          mv.setAttribute('auto-rotate', '');
-          toggleRotateBtn.textContent = 'Pausar rotación';
+        function getCentroid(geometry) {
+            let lats = 0, lngs = 0, count = 0;
+            const coords = geometry.type === 'Polygon' ? geometry.coordinates[0] : geometry.coordinates.flat(2);
+            coords.forEach(([lng, lat]) => {
+                lats += lat;
+                lngs += lng;
+                count++;
+            });
+            return { lat: lats / count, lng: lngs / count };
         }
-      });
-
-      resetCamBtn.addEventListener('click', () => {
-        try {
-          mv.cameraOrbit = '0rad 75deg 2.5m';
-          mv.jumpCameraToGoal();
-        } catch (e) {
-          // si falla el reset en model-viewer, no hacemos nada
-        }
-      });
-    }
-  </script>
-
+    </script>
 </body>
 </html>
