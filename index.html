@@ -1,261 +1,476 @@
-<!--
-  Archivo: earth_viewer.html
-  Instrucciones:
-  1. Coloca este archivo en la misma carpeta que "earth.glb".
-  2. Abre este archivo en tu navegador (doble click) para ver el modelo 3D.
-  3. Si tu navegador bloquea recursos locales, sirve la carpeta con un servidor (por ejemplo: `python -m http.server 8000`) y abre http://localhost:8000
-  
-  Este archivo usa <model-viewer> cuando está disponible. Si el navegador NO soporta <model-viewer>, carga automáticamente
-  un visor alternativo basado en Three.js (GLTFLoader + OrbitControls) que también carga `earth.glb` desde la misma carpeta.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Visor 3D - Tierra (earth.glb)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globo Terráqueo 3D con Puntos de Calor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- model-viewer: visor simple para glTF/glb -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
 
-  <style>
-    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: #071029; color: #e6f0ff; }
-    .container { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; gap: 12px; padding: 18px; box-sizing: border-box; }
-    header { display:flex; gap:12px; align-items:center; }
-    header h1 { font-size: 1.1rem; margin: 0; }
-    .viewer-wrap { display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius: 12px; padding: 12px; }
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 20px;
+            z-index: 10;
+        }
 
-    model-viewer, #three-viewer { width: min(1100px, 100%); height: 70vh; border-radius: 10px; box-shadow: 0 8px 30px rgba(2,6,23,0.6); background: linear-gradient(180deg,#041024,#0b2743); display:block; }
+        #header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
 
-    footer { display:flex; gap:10px; align-items:center; justify-content:space-between; font-size:0.9rem; }
-    .controls { display:flex; gap:8px; }
-    button, a.button { background: #0b6ed1; color: white; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; text-decoration:none; }
-    button.secondary { background: transparent; border: 1px solid rgba(255,255,255,0.08); }
-    small.hint { opacity: 0.9 }
+        #header p {
+            font-size: 14px;
+            color: #aaa;
+        }
 
-    /* Mensaje de compatibilidad alternativa */
-    .fallback-msg { padding:16px; color:#ddd; }
-  </style>
+        #selected-info {
+            margin-top: 10px;
+            padding: 12px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            border-radius: 8px;
+            display: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(220, 38, 38, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(220, 38, 38, 1); }
+        }
+
+        #canvas-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
+        }
+
+        #stats {
+            position: absolute;
+            top: 120px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 10;
+            font-size: 12px;
+        }
+
+        .stat-item {
+            margin: 5px 0;
+            padding: 5px;
+            background: rgba(220, 38, 38, 0.2);
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Visor 3D — Tierra (earth.glb)</h1>
-      <small class="hint">Coloca <code>earth.glb</code> en la misma carpeta que este archivo.</small>
-    </header>
+    <div id="header">
+        <h1>🌍 Globo Terráqueo 3D - Mapa de Calor en Tiempo Real</h1>
+        <p>🖱️ Arrastra para rotar • 🔍 Rueda del mouse para zoom • 👆 Click en los puntos rojos</p>
+        <div id="selected-info"></div>
+    </div>
 
-    <main class="viewer-wrap">
-      <!-- model-viewer (primario) -->
-      <model-viewer id="mv"
-                    src="tierra.glb"
-                    alt="Modelo 3D de la Tierra"
-                    camera-controls
-                    auto-rotate
-                    exposure="1.0"
-                    shadow-intensity="0.8"
-                    ar
-                    ar-modes="webxr scene-viewer quick-look">
-        <!-- Mensaje dentro de model-viewer para navegadores que muestren el elemento pero no lo puedan renderizar -->
-        <div class="fallback-msg">
-          El visor embed no puede renderizar <code>earth.glb</code> en este navegador. Debajo se activará un visor alternativo compatible (Three.js).
-        </div>
-      </model-viewer>
+    <div id="stats">
+        <div class="stat-item">🔴 Puntos activos: <span id="active-points">0</span></div>
+        <div class="stat-item">🌡️ Temperatura promedio: <span id="avg-temp">0</span>°C</div>
+        <div class="stat-item">⚡ Intensidad máxima: <span id="max-intensity">0</span>%</div>
+    </div>
 
-      <!-- Contenedor alternativo para navegadores que NO soporten <model-viewer> -->
-      <div id="three-container" style="display:none; width:100%;">
-        <canvas id="three-viewer"></canvas>
-        <div style="position:relative;margin-top:8px;color:#ddd;">
-          <small>Visor alternativo (Three.js) — usa el ratón o el touch para rotar / acercar.</small>
-        </div>
-      </div>
-    </main>
+    <div id="controls">
+        <h3 style="margin-bottom: 10px;">⚙️ Controles</h3>
+        <button class="control-btn" onclick="toggleRotation()">⏯️ Rotación Auto</button>
+        <button class="control-btn" onclick="toggleHeatWaves()">🌊 Ondas de Calor</button>
+        <button class="control-btn" onclick="resetView()">🔄 Restablecer Vista</button>
+    </div>
 
-    <footer>
-      <div class="controls">
-        <button id="toggleRotate">Pausar rotación</button>
-        <button id="resetCam" class="secondary">Reset cámara</button>
-        <a id="download" class="button" href="earth.glb" download>Descargar .glb</a>
-      </div>
-      <div>
-        <small>Si el modelo no carga localmente, ejecuta: <code>python -m http.server</code></small>
-      </div>
-    </footer>
-  </div>
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
 
-  <!-- Si <model-viewer> no está disponible, cargamos Three.js y GLTFLoader para reproducir el modelo. -->
-  <script type="module">
-    // Determinamos si el navegador soporta el componente <model-viewer>
-    const mvElement = customElements.get('model-viewer');
-    const mv = document.getElementById('mv');
-    const threeContainer = document.getElementById('three-container');
-    const canvas = document.getElementById('three-viewer');
-    const toggleRotateBtn = document.getElementById('toggleRotate');
-    const resetCamBtn = document.getElementById('resetCam');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Coordenadas de puntos de calor con animación
+        const heatPoints = [
+            { name: 'Tokyo', lat: 35.6762, lng: 139.6503, intensity: 0.9, temp: 42 },
+            { name: 'Nueva York', lat: 40.7128, lng: -74.0060, intensity: 0.8, temp: 38 },
+            { name: 'Londres', lat: 51.5074, lng: -0.1278, intensity: 0.7, temp: 35 },
+            { name: 'Sídney', lat: -33.8688, lng: 151.2093, intensity: 0.85, temp: 40 },
+            { name: 'São Paulo', lat: -23.5505, lng: -46.6333, intensity: 0.75, temp: 36 },
+            { name: 'Mumbai', lat: 19.0760, lng: 72.8777, intensity: 0.95, temp: 45 },
+            { name: 'Ciudad de México', lat: 19.4326, lng: -99.1332, intensity: 0.8, temp: 38 },
+            { name: 'El Cairo', lat: 30.0444, lng: 31.2357, intensity: 0.7, temp: 35 },
+            { name: 'Moscú', lat: 55.7558, lng: 37.6173, intensity: 0.65, temp: 32 },
+            { name: 'Pekín', lat: 39.9042, lng: 116.4074, intensity: 0.9, temp: 42 },
+            { name: 'Buenos Aires', lat: -34.6037, lng: -58.3816, intensity: 0.72, temp: 34 },
+            { name: 'Lagos', lat: 6.5244, lng: 3.3792, intensity: 0.88, temp: 41 },
+            { name: 'Dubai', lat: 25.2048, lng: 55.2708, intensity: 0.98, temp: 48 },
+            { name: 'Singapur', lat: 1.3521, lng: 103.8198, intensity: 0.92, temp: 43 }
+        ];
 
-    let threeState = null; // guardará { renderer, scene, camera, controls, mixer, clock, autoRotate }
-
-    function initThreeViewer() {
-      // Importamos módulos desde unpkg (ES modules)
-      Promise.all([
-        import('https://unpkg.com/three@0.152.2/build/three.module.js'),
-        import('https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js'),
-        import('https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js')
-      ]).then(([THREE, { GLTFLoader }, { OrbitControls }]) => {
-        // Renderer
-        const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-        renderer.setPixelRatio(window.devicePixelRatio || 1);
-        renderer.setSize(canvas.clientWidth || canvas.parentElement.clientWidth, canvas.clientHeight || (window.innerHeight * 0.7));
-        renderer.outputColorSpace = THREE.sRGBColorSpace || null;
-
-        // Scene & Camera
+        // Configuración de la escena
+        const canvas = document.getElementById('canvas');
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x041024);
+        scene.fog = new THREE.Fog(0x000000, 20, 50);
+        
+        const camera = new THREE.PerspectiveCamera(
+            60,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            1000
+        );
 
-        const camera = new THREE.PerspectiveCamera(50, (canvas.clientWidth || window.innerWidth) / (canvas.clientHeight || window.innerHeight * 0.7), 0.1, 1000);
-        camera.position.set(0, 0, 3);
+        const renderer = new THREE.WebGLRenderer({ 
+            canvas: canvas,
+            antialias: true,
+            alpha: true 
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setClearColor(0x000000, 1);
 
-        // Lights
-        const hemi = new THREE.HemisphereLight(0xffffff, 0x444444, 0.6);
-        hemi.position.set(0, 1, 0);
-        scene.add(hemi);
+        // Crear el globo terráqueo con textura mejorada
+        const earthGeometry = new THREE.SphereGeometry(5, 128, 128);
+        const earthMaterial = new THREE.MeshPhongMaterial({
+            color: 0x1e40af,
+            emissive: 0x0a1929,
+            shininess: 15,
+            specular: 0x333333
+        });
+        const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+        scene.add(earth);
 
-        const dir = new THREE.DirectionalLight(0xffffff, 0.9);
-        dir.position.set(5, 3, 5);
-        scene.add(dir);
+        // Atmósfera
+        const atmosphereGeometry = new THREE.SphereGeometry(5.3, 64, 64);
+        const atmosphereMaterial = new THREE.MeshBasicMaterial({
+            color: 0x4444ff,
+            transparent: true,
+            opacity: 0.1,
+            side: THREE.BackSide
+        });
+        const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+        scene.add(atmosphere);
 
-        // Controls
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.08;
-        controls.minDistance = 1.2;
-        controls.maxDistance = 10;
+        // Continentes
+        const landGeometry = new THREE.SphereGeometry(5.02, 128, 128);
+        const landMaterial = new THREE.MeshPhongMaterial({
+            color: 0x16a34a,
+            emissive: 0x0f5a2e,
+            transparent: true,
+            opacity: 0.8
+        });
+        const land = new THREE.Mesh(landGeometry, landMaterial);
+        scene.add(land);
 
-        // GLTF Loader
-        const loader = new GLTFLoader();
-        const url = 'earth.glb';
+        // Variables de control
+        let autoRotate = true;
+        let showHeatWaves = true;
+        let rotation = { x: 0.3, y: 0 };
+        let autoRotationSpeed = 0.005;
 
-        const clock = new THREE.Clock();
-        let mixer = null;
+        // Función para convertir lat/lng a coordenadas 3D
+        function latLngToVector3(lat, lng, radius) {
+            const phi = (90 - lat) * (Math.PI / 180);
+            const theta = (lng + 180) * (Math.PI / 180);
+            
+            const x = -(radius * Math.sin(phi) * Math.cos(theta));
+            const z = radius * Math.sin(phi) * Math.sin(theta);
+            const y = radius * Math.cos(phi);
+            
+            return new THREE.Vector3(x, y, z);
+        }
 
-        loader.load(url, (gltf) => {
-          const root = gltf.scene || gltf.scenes[0];
-          // Ajustar tamaño si el modelo es grande/pequeño
-          root.position.set(0, 0, 0);
+        // Crear puntos de calor con efectos 3D
+        const heatPointData = [];
 
-          // calcular bounding box para ajustar cámara
-          const box = new THREE.Box3().setFromObject(root);
-          const size = box.getSize(new THREE.Vector3()).length();
-          const center = box.getCenter(new THREE.Vector3());
+        heatPoints.forEach((point, index) => {
+            const position = latLngToVector3(point.lat, point.lng, 5.15);
+            
+            // Punto de calor principal - más grande y brillante
+            const pointGeometry = new THREE.SphereGeometry(0.15, 32, 32);
+            const hue = 0.02 - point.intensity * 0.02;
+            const pointMaterial = new THREE.MeshBasicMaterial({
+                color: new THREE.Color().setHSL(hue, 1, 0.6),
+                transparent: true,
+                opacity: 0.95
+            });
+            const pointMesh = new THREE.Mesh(pointGeometry, pointMaterial);
+            pointMesh.position.copy(position);
+            pointMesh.userData = { 
+                name: point.name, 
+                intensity: point.intensity,
+                temp: point.temp,
+                isHeatPoint: true,
+                originalScale: 1
+            };
+            scene.add(pointMesh);
+            
+            // Múltiples capas de glow animadas
+            const glows = [];
+            for (let i = 0; i < 3; i++) {
+                const glowGeometry = new THREE.SphereGeometry(0.3 + i * 0.15, 32, 32);
+                const glowMaterial = new THREE.MeshBasicMaterial({
+                    color: new THREE.Color().setHSL(hue, 1, 0.5),
+                    transparent: true,
+                    opacity: 0.3 - i * 0.1
+                });
+                const glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
+                glowMesh.position.copy(position);
+                glowMesh.userData = { glowLayer: i };
+                scene.add(glowMesh);
+                glows.push(glowMesh);
+            }
 
-          // normalizar escala si es necesario
-          const scaleFactor = 1 / size;
-          if (isFinite(scaleFactor) && scaleFactor > 0) root.scale.setScalar(scaleFactor);
+            // Ondas de calor expansivas
+            const waveGeometry = new THREE.RingGeometry(0.3, 0.4, 32);
+            const waveMaterial = new THREE.MeshBasicMaterial({
+                color: new THREE.Color().setHSL(hue, 1, 0.6),
+                transparent: true,
+                opacity: 0.5,
+                side: THREE.DoubleSide
+            });
+            const waveMesh = new THREE.Mesh(waveGeometry, waveMaterial);
+            waveMesh.position.copy(position);
+            waveMesh.lookAt(new THREE.Vector3(0, 0, 0));
+            scene.add(waveMesh);
 
-          scene.add(root);
-
-          // Si el glTF trae animaciones
-          if (gltf.animations && gltf.animations.length) {
-            mixer = new THREE.AnimationMixer(root);
-            gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
-          }
-
-          // Guardar estado
-          threeState = { renderer, scene, camera, controls, mixer, clock, autoRotate: true };
-
-          // Ajustar cámara para encuadrar
-          camera.lookAt(center.x, center.y, center.z);
-
-          animate();
-        }, (xhr) => {
-          // progreso opcional
-          // console.log('loading:', (xhr.loaded / xhr.total * 100).toFixed(0) + '%');
-        }, (err) => {
-          console.error('Error cargando glb:', err);
-          const msg = document.createElement('div');
-          msg.style.color = '#f88';
-          msg.style.padding = '12px';
-          msg.textContent = 'Error al cargar earth.glb. ¿Está en la misma carpeta y estás sirviendo archivos por HTTP?';
-          canvas.parentElement.appendChild(msg);
+            heatPointData.push({
+                point: pointMesh,
+                glows: glows,
+                wave: waveMesh,
+                originalPos: position.clone(),
+                phase: index * 0.5,
+                data: point
+            });
         });
 
-        window.addEventListener('resize', () => {
-          if (!threeState) return;
-          const w = canvas.clientWidth || canvas.parentElement.clientWidth;
-          const h = canvas.clientHeight || Math.round(window.innerHeight * 0.7);
-          renderer.setSize(w, h);
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
+        // Iluminación mejorada
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+        scene.add(ambientLight);
+        
+        const pointLight1 = new THREE.PointLight(0xffffff, 1.2, 100);
+        pointLight1.position.set(15, 10, 15);
+        scene.add(pointLight1);
+
+        const pointLight2 = new THREE.PointLight(0xff4444, 0.5, 100);
+        pointLight2.position.set(-15, -10, -15);
+        scene.add(pointLight2);
+
+        camera.position.z = 15;
+
+        // Controles de mouse
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            previousMousePosition = { x: e.clientX, y: e.clientY };
         });
 
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const deltaX = e.clientX - previousMousePosition.x;
+                const deltaY = e.clientY - previousMousePosition.y;
+                
+                // Solo ajusta la rotación base, el movimiento continúa
+                rotation.y += deltaX * 0.005;
+                rotation.x += deltaY * 0.005;
+                rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotation.x));
+                
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        canvas.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            camera.position.z += e.deltaY * 0.01;
+            camera.position.z = Math.max(8, Math.min(30, camera.position.z));
+        });
+
+        // Detección de clicks
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        const selectedInfo = document.getElementById('selected-info');
+
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+            
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(heatPointData.map(d => d.point));
+            
+            if (intersects.length > 0) {
+                const obj = intersects[0].object;
+                if (obj.userData.isHeatPoint) {
+                    selectedInfo.style.display = 'block';
+                    selectedInfo.innerHTML = `
+                        <strong>📍 ${obj.userData.name}</strong><br>
+                        🌡️ Temperatura: ${obj.userData.temp}°C<br>
+                        ⚡ Intensidad: ${(obj.userData.intensity * 100).toFixed(0)}%
+                    `;
+                }
+            }
+        });
+
+        // Funciones de control
+        function toggleRotation() {
+            if (autoRotationSpeed === 0) {
+                autoRotationSpeed = 0.005;
+            } else {
+                autoRotationSpeed = 0;
+            }
+        }
+
+        function toggleHeatWaves() {
+            showHeatWaves = !showHeatWaves;
+        }
+
+        function resetView() {
+            camera.position.set(0, 0, 15);
+            rotation = { x: 0.3, y: 0 };
+            autoRotate = true;
+        }
+
+        // Actualizar estadísticas
+        function updateStats() {
+            document.getElementById('active-points').textContent = heatPoints.length;
+            const avgTemp = (heatPoints.reduce((sum, p) => sum + p.temp, 0) / heatPoints.length).toFixed(1);
+            document.getElementById('avg-temp').textContent = avgTemp;
+            const maxInt = Math.max(...heatPoints.map(p => p.intensity)) * 100;
+            document.getElementById('max-intensity').textContent = maxInt.toFixed(0);
+        }
+
+        updateStats();
+
+        // Animación principal
         function animate() {
-          if (!threeState) return;
-          requestAnimationFrame(animate);
-          const { renderer, scene, camera, controls, mixer, clock, autoRotate } = threeState;
-          const delta = clock.getDelta();
-          if (mixer) mixer.update(delta);
-          if (autoRotate) controls.autoRotate = true;
-          controls.update();
-          renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+            
+            const time = Date.now() * 0.001;
+            
+            // Rotación automática continua del mundo
+            rotation.y += autoRotationSpeed;
+            
+            // Rotar tierra con movimiento continuo
+            earth.rotation.y = rotation.y;
+            earth.rotation.x = rotation.x;
+            land.rotation.y = rotation.y;
+            land.rotation.x = rotation.x;
+            
+            // Atmósfera rota más lento para efecto de profundidad
+            atmosphere.rotation.y = rotation.y * 0.95;
+            atmosphere.rotation.x = rotation.x * 0.95;
+            
+            // Animar puntos de calor con movimiento 3D
+            heatPointData.forEach((data, i) => {
+                const phase = time + data.phase;
+                
+                // Pulsación del punto principal
+                const scale = 1 + Math.sin(phase * 2) * 0.3;
+                data.point.scale.setScalar(scale);
+                
+                // Movimiento flotante
+                const floatOffset = Math.sin(phase) * 0.05;
+                const newPos = data.originalPos.clone().multiplyScalar(1 + floatOffset);
+                data.point.position.copy(newPos);
+                
+                // Rotación local
+                data.point.rotation.y += 0.02;
+                
+                // Animar capas de glow
+                data.glows.forEach((glow, j) => {
+                    const glowScale = 1 + Math.sin(phase * 1.5 - j * 0.5) * 0.4;
+                    glow.scale.setScalar(glowScale);
+                    glow.position.copy(newPos);
+                    glow.material.opacity = 0.3 - j * 0.1 + Math.sin(phase * 2) * 0.1;
+                });
+                
+                // Animar ondas de calor
+                if (showHeatWaves) {
+                    data.wave.visible = true;
+                    const waveScale = 1 + (phase % 2) * 2;
+                    data.wave.scale.setScalar(waveScale);
+                    data.wave.material.opacity = Math.max(0, 0.5 - (phase % 2) * 0.25);
+                    data.wave.position.copy(newPos);
+                } else {
+                    data.wave.visible = false;
+                }
+                
+                // Rotar con la tierra
+                const tempEuler = new THREE.Euler(rotation.x, rotation.y, 0, 'XYZ');
+                data.point.quaternion.setFromEuler(tempEuler);
+                data.glows.forEach(glow => glow.quaternion.setFromEuler(tempEuler));
+                data.wave.quaternion.setFromEuler(tempEuler);
+            });
+            
+            renderer.render(scene, camera);
         }
 
-        // Botones
-        toggleRotateBtn.addEventListener('click', () => {
-          if (!threeState) return;
-          threeState.autoRotate = !threeState.autoRotate;
-          toggleRotateBtn.textContent = threeState.autoRotate ? 'Pausar rotación' : 'Iniciar rotación';
+        // Responsive
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        resetCamBtn.addEventListener('click', () => {
-          if (!threeState) return;
-          const { camera, controls } = threeState;
-          camera.position.set(0, 0, 3);
-          controls.target.set(0,0,0);
-          controls.update();
-        });
-
-      }).catch(err => {
-        console.error('Error cargando módulos Three.js:', err);
-        const msg = document.createElement('div');
-        msg.style.color = '#f88';
-        msg.style.padding = '12px';
-        msg.textContent = 'Error al cargar los módulos de Three.js desde CDN.';
-        canvas.parentElement.appendChild(msg);
-      });
-    }
-
-    // Si el navegador NO define <model-viewer>, mostramos el visor Three.js
-    if (!mvElement) {
-      mv.style.display = 'none';
-      threeContainer.style.display = 'block';
-      initThreeViewer();
-    } else {
-      // También comprobamos si model-viewer pudo cargar correctamente — si no, mostramos el fallback.
-      // Si model-viewer falla al renderizar, lo notificará internamente; aquí hacemos una comprobación simple: que el elemento tenga shadowRoot.
-      // En navegadores modernos model-viewer funciona bien; si deseas forzar Three.js, descomenta la línea siguiente:
-      // mv.style.display = 'none'; threeContainer.style.display = 'block'; initThreeViewer();
-
-      // Vincular botones para model-viewer
-      toggleRotateBtn.addEventListener('click', () => {
-        if (mv.hasAttribute('auto-rotate')) {
-          mv.removeAttribute('auto-rotate');
-          toggleRotateBtn.textContent = 'Iniciar rotación';
-        } else {
-          mv.setAttribute('auto-rotate', '');
-          toggleRotateBtn.textContent = 'Pausar rotación';
-        }
-      });
-
-      resetCamBtn.addEventListener('click', () => {
-        try {
-          mv.cameraOrbit = '0rad 75deg 2.5m';
-          mv.jumpCameraToGoal();
-        } catch (e) {
-          // si falla el reset en model-viewer, no hacemos nada
-        }
-      });
-    }
-  </script>
-
+        animate();
+    </script>
 </body>
 </html>
