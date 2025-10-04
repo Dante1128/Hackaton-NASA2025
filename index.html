@@ -3,474 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globo Terráqueo 3D con Puntos de Calor</title>
+    <title>Mapa Mundi 3D Interactivo con Puntos de Datos</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, sans-serif;
-            background: #000;
+            margin: 0;
             overflow: hidden;
+            font-family: Arial, sans-serif;
         }
-
-        #header {
+        #sidebar {
             position: absolute;
-            top: 0;
             left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 20px;
-            z-index: 10;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            background: white;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+            padding: 10px;
         }
-
-        #header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        #country-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-
-        #header p {
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        #selected-info {
-            margin-top: 10px;
-            padding: 12px;
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-            border-radius: 8px;
-            display: none;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 10px rgba(220, 38, 38, 0.5); }
-            50% { box-shadow: 0 0 20px rgba(220, 38, 38, 1); }
-        }
-
-        #canvas-container {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-        }
-
-        #canvas {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        #controls {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            z-index: 10;
-        }
-
-        .control-btn {
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .control-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
-        }
-
-        #stats {
-            position: absolute;
-            top: 120px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            z-index: 10;
-            font-size: 12px;
-        }
-
-        .stat-item {
-            margin: 5px 0;
+        #country-list li {
             padding: 5px;
-            background: rgba(220, 38, 38, 0.2);
-            border-radius: 4px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        #country-list li:hover {
+            background: #f0f0f0;
+        }
+        #country-list li.selected {
+            background: #007bff;
+            color: white;
+        }
+        #globeViz {
+            position: absolute;
+            left: 200px;
+            right: 0;
+            top: 0;
+            bottom: 0;
         }
     </style>
+    <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
 </head>
 <body>
-    <div id="header">
-        <h1>🌍 Globo Terráqueo 3D - Mapa de Calor en Tiempo Real</h1>
-        <p>🖱️ Arrastra para rotar • 🔍 Rueda del mouse para zoom • 👆 Click en los puntos rojos</p>
-        <div id="selected-info"></div>
+    <div id="sidebar">
+        <h3>Selecciona un País</h3>
+        <ul id="country-list"></ul>
     </div>
+    <div id="globeViz"></div>
 
-    <div id="stats">
-        <div class="stat-item">🔴 Puntos activos: <span id="active-points">0</span></div>
-        <div class="stat-item">🌡️ Temperatura promedio: <span id="avg-temp">0</span>°C</div>
-        <div class="stat-item">⚡ Intensidad máxima: <span id="max-intensity">0</span>%</div>
-    </div>
-
-    <div id="controls">
-        <h3 style="margin-bottom: 10px;">⚙️ Controles</h3>
-        <button class="control-btn" onclick="toggleRotation()">⏯️ Rotación Auto</button>
-        <button class="control-btn" onclick="toggleHeatWaves()">🌊 Ondas de Calor</button>
-        <button class="control-btn" onclick="resetView()">🔄 Restablecer Vista</button>
-    </div>
-
-    <div id="canvas-container">
-        <canvas id="canvas"></canvas>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        // Coordenadas de puntos de calor con animación
-        const heatPoints = [
-            { name: 'Tokyo', lat: 35.6762, lng: 139.6503, intensity: 0.9, temp: 42 },
-            { name: 'Nueva York', lat: 40.7128, lng: -74.0060, intensity: 0.8, temp: 38 },
-            { name: 'Londres', lat: 51.5074, lng: -0.1278, intensity: 0.7, temp: 35 },
-            { name: 'Sídney', lat: -33.8688, lng: 151.2093, intensity: 0.85, temp: 40 },
-            { name: 'São Paulo', lat: -23.5505, lng: -46.6333, intensity: 0.75, temp: 36 },
-            { name: 'Mumbai', lat: 19.0760, lng: 72.8777, intensity: 0.95, temp: 45 },
-            { name: 'Ciudad de México', lat: 19.4326, lng: -99.1332, intensity: 0.8, temp: 38 },
-            { name: 'El Cairo', lat: 30.0444, lng: 31.2357, intensity: 0.7, temp: 35 },
-            { name: 'Moscú', lat: 55.7558, lng: 37.6173, intensity: 0.65, temp: 32 },
-            { name: 'Pekín', lat: 39.9042, lng: 116.4074, intensity: 0.9, temp: 42 },
-            { name: 'Buenos Aires', lat: -34.6037, lng: -58.3816, intensity: 0.72, temp: 34 },
-            { name: 'Lagos', lat: 6.5244, lng: 3.3792, intensity: 0.88, temp: 41 },
-            { name: 'Dubai', lat: 25.2048, lng: 55.2708, intensity: 0.98, temp: 48 },
-            { name: 'Singapur', lat: 1.3521, lng: 103.8198, intensity: 0.92, temp: 43 }
-        ];
+        let selectedCountry = null;
+        const countryList = document.getElementById('country-list');
+        let countriesData = [];
+        let liMap = {};
+        let pointsData = [];
 
-        // Configuración de la escena
-        const canvas = document.getElementById('canvas');
-        const scene = new THREE.Scene();
-        scene.fog = new THREE.Fog(0x000000, 20, 50);
-        
-        const camera = new THREE.PerspectiveCamera(
-            60,
-            window.innerWidth / window.innerHeight,
-            0.1,
-            1000
-        );
+        const updateColors = () => feat => feat.properties.ADMIN === selectedCountry ? 'red' : 'rgba(0, 0, 255, 0.1)';
+        const updateAltitude = () => feat => feat.properties.ADMIN === selectedCountry ? 0.06 : 0.01;
 
-        const renderer = new THREE.WebGLRenderer({ 
-            canvas: canvas,
-            antialias: true,
-            alpha: true 
-        });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setClearColor(0x000000, 1);
+        const world = Globe()(document.getElementById('globeViz'))
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+            .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+            .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
+            .polygonStrokeColor(() => '#111')
+            .polygonLabel(({ properties: d }) => `
+                <b>${d.ADMIN || d.name} (${d.ISO_A2 || d.iso_a2})</b>
+            `)
+            .onPolygonHover(hoverD => world
+                .polygonAltitude(hoverD ? 0.08 : updateAltitude())
+            )
+            .onPolygonClick(({ properties: d }) => selectCountry(d.ADMIN || d.name))
+            .polygonsTransitionDuration(0)
+            .polygonCapCurvatureResolution(3)
+            .pointColor(() => 'red')
+            .pointAltitude(0)
+            .pointRadius(0.05)
+            .pointLabel(d => `
+                <b>${d.name}</b><br>
+                País: ${d.country.name}<br>
+                Coordenadas: ${d.lat.toFixed(4)}, ${d.lng.toFixed(4)}<br>
+                Sensor: ${d.sensorName}
+            `)
+            .onPointClick(d => {
+                world.pointOfView({ lat: d.lat, lng: d.lng, altitude: 0.5 }, 1000);
+                alert(`Detalles del punto:\nNombre: ${d.name}\nPaís: ${d.country.name}\nSensor: ${d.sensorName}`);
+            })
+            .pointsTransitionDuration(0);
 
-        // Crear el globo terráqueo con textura mejorada
-        const earthGeometry = new THREE.SphereGeometry(5, 128, 128);
-        const earthMaterial = new THREE.MeshPhongMaterial({
-            color: 0x1e40af,
-            emissive: 0x0a1929,
-            shininess: 15,
-            specular: 0x333333
-        });
-        const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-        scene.add(earth);
+        // Cargar GeoJSON de países
+        fetch('https://raw.githubusercontent.com/martynafford/natural-earth-geojson/master/110m/cultural/ne_110m_admin_0_countries.geojson')
+            .then(res => res.json())
+            .then(data => {
+                countriesData = data.features;
+                world.polygonsData(countriesData)
+                    .polygonCapColor(updateColors())
+                    .polygonAltitude(updateAltitude());
 
-        // Atmósfera
-        const atmosphereGeometry = new THREE.SphereGeometry(5.3, 64, 64);
-        const atmosphereMaterial = new THREE.MeshBasicMaterial({
-            color: 0x4444ff,
-            transparent: true,
-            opacity: 0.1,
-            side: THREE.BackSide
-        });
-        const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
-        scene.add(atmosphere);
-
-        // Continentes
-        const landGeometry = new THREE.SphereGeometry(5.02, 128, 128);
-        const landMaterial = new THREE.MeshPhongMaterial({
-            color: 0x16a34a,
-            emissive: 0x0f5a2e,
-            transparent: true,
-            opacity: 0.8
-        });
-        const land = new THREE.Mesh(landGeometry, landMaterial);
-        scene.add(land);
-
-        // Variables de control
-        let autoRotate = true;
-        let showHeatWaves = true;
-        let rotation = { x: 0.3, y: 0 };
-        let autoRotationSpeed = 0.005;
-
-        // Función para convertir lat/lng a coordenadas 3D
-        function latLngToVector3(lat, lng, radius) {
-            const phi = (90 - lat) * (Math.PI / 180);
-            const theta = (lng + 180) * (Math.PI / 180);
-            
-            const x = -(radius * Math.sin(phi) * Math.cos(theta));
-            const z = radius * Math.sin(phi) * Math.sin(theta);
-            const y = radius * Math.cos(phi);
-            
-            return new THREE.Vector3(x, y, z);
-        }
-
-        // Crear puntos de calor con efectos 3D
-        const heatPointData = [];
-
-        heatPoints.forEach((point, index) => {
-            const position = latLngToVector3(point.lat, point.lng, 5.15);
-            
-            // Punto de calor principal - más grande y brillante
-            const pointGeometry = new THREE.SphereGeometry(0.15, 32, 32);
-            const hue = 0.02 - point.intensity * 0.02;
-            const pointMaterial = new THREE.MeshBasicMaterial({
-                color: new THREE.Color().setHSL(hue, 1, 0.6),
-                transparent: true,
-                opacity: 0.95
-            });
-            const pointMesh = new THREE.Mesh(pointGeometry, pointMaterial);
-            pointMesh.position.copy(position);
-            pointMesh.userData = { 
-                name: point.name, 
-                intensity: point.intensity,
-                temp: point.temp,
-                isHeatPoint: true,
-                originalScale: 1
-            };
-            scene.add(pointMesh);
-            
-            // Múltiples capas de glow animadas
-            const glows = [];
-            for (let i = 0; i < 3; i++) {
-                const glowGeometry = new THREE.SphereGeometry(0.3 + i * 0.15, 32, 32);
-                const glowMaterial = new THREE.MeshBasicMaterial({
-                    color: new THREE.Color().setHSL(hue, 1, 0.5),
-                    transparent: true,
-                    opacity: 0.3 - i * 0.1
+                const countryNames = countriesData.map(f => f.properties.ADMIN || f.properties.name).sort();
+                countryNames.forEach(name => {
+                    const li = document.createElement('li');
+                    li.textContent = name;
+                    li.onclick = () => selectCountry(name);
+                    countryList.appendChild(li);
+                    liMap[name] = li;
                 });
-                const glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
-                glowMesh.position.copy(position);
-                glowMesh.userData = { glowLayer: i };
-                scene.add(glowMesh);
-                glows.push(glowMesh);
-            }
+            })
+            .catch(err => console.error('Error loading GeoJSON:', err));
 
-            // Ondas de calor expansivas
-            const waveGeometry = new THREE.RingGeometry(0.3, 0.4, 32);
-            const waveMaterial = new THREE.MeshBasicMaterial({
-                color: new THREE.Color().setHSL(hue, 1, 0.6),
-                transparent: true,
-                opacity: 0.5,
-                side: THREE.DoubleSide
+        // Cargar datos desde coordenadas.json
+        fetch('./coordenadas.json')
+            .then(res => res.json())
+            .then(jsonData => {
+                const results = jsonData.results || [];
+                pointsData = results.map(loc => ({
+                    lat: loc.coordinates.latitude,
+                    lng: loc.coordinates.longitude,
+                    name: loc.name,
+                    country: loc.country,
+                    sensorName: loc.sensors[0]?.parameter.displayName || 'N/A'
+                }));
+                world.pointsData(pointsData);
+                console.log(`Cargados ${pointsData.length} puntos de datos.`);
+            })
+            .catch(err => console.error('Error al cargar coordenadas.json:', err));
+
+        function selectCountry(name) {
+            selectedCountry = name;
+            world
+                .polygonCapColor(updateColors())
+                .polygonAltitude(updateAltitude());
+
+            Object.values(liMap).forEach(li => li.classList.remove('selected'));
+            if (liMap[name]) liMap[name].classList.add('selected');
+
+            const selectedFeat = countriesData.find(f => (f.properties.ADMIN || f.properties.name) === name);
+            if (selectedFeat) {
+                const centroid = getCentroid(selectedFeat.geometry);
+                world.pointOfView({ lat: centroid.lat, lng: centroid.lng, altitude: 1.5 }, 1000);
+            }
+        }
+
+        function getCentroid(geometry) {
+            let lats = 0, lngs = 0, count = 0;
+            const coords = geometry.type === 'Polygon' ? geometry.coordinates[0] : geometry.coordinates.flat(2);
+            coords.forEach(([lng, lat]) => {
+                lats += lat;
+                lngs += lng;
+                count++;
             });
-            const waveMesh = new THREE.Mesh(waveGeometry, waveMaterial);
-            waveMesh.position.copy(position);
-            waveMesh.lookAt(new THREE.Vector3(0, 0, 0));
-            scene.add(waveMesh);
-
-            heatPointData.push({
-                point: pointMesh,
-                glows: glows,
-                wave: waveMesh,
-                originalPos: position.clone(),
-                phase: index * 0.5,
-                data: point
-            });
-        });
-
-        // Iluminación mejorada
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
-        scene.add(ambientLight);
-        
-        const pointLight1 = new THREE.PointLight(0xffffff, 1.2, 100);
-        pointLight1.position.set(15, 10, 15);
-        scene.add(pointLight1);
-
-        const pointLight2 = new THREE.PointLight(0xff4444, 0.5, 100);
-        pointLight2.position.set(-15, -10, -15);
-        scene.add(pointLight2);
-
-        camera.position.z = 15;
-
-        // Controles de mouse
-        let isDragging = false;
-        let previousMousePosition = { x: 0, y: 0 };
-
-        canvas.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            previousMousePosition = { x: e.clientX, y: e.clientY };
-        });
-
-        canvas.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                const deltaX = e.clientX - previousMousePosition.x;
-                const deltaY = e.clientY - previousMousePosition.y;
-                
-                // Solo ajusta la rotación base, el movimiento continúa
-                rotation.y += deltaX * 0.005;
-                rotation.x += deltaY * 0.005;
-                rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotation.x));
-                
-                previousMousePosition = { x: e.clientX, y: e.clientY };
-            }
-        });
-
-        canvas.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        canvas.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            camera.position.z += e.deltaY * 0.01;
-            camera.position.z = Math.max(8, Math.min(30, camera.position.z));
-        });
-
-        // Detección de clicks
-        const raycaster = new THREE.Raycaster();
-        const mouse = new THREE.Vector2();
-        const selectedInfo = document.getElementById('selected-info');
-
-        canvas.addEventListener('click', (e) => {
-            const rect = canvas.getBoundingClientRect();
-            mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-            mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-            
-            raycaster.setFromCamera(mouse, camera);
-            const intersects = raycaster.intersectObjects(heatPointData.map(d => d.point));
-            
-            if (intersects.length > 0) {
-                const obj = intersects[0].object;
-                if (obj.userData.isHeatPoint) {
-                    selectedInfo.style.display = 'block';
-                    selectedInfo.innerHTML = `
-                        <strong>📍 ${obj.userData.name}</strong><br>
-                        🌡️ Temperatura: ${obj.userData.temp}°C<br>
-                        ⚡ Intensidad: ${(obj.userData.intensity * 100).toFixed(0)}%
-                    `;
-                }
-            }
-        });
-
-        // Funciones de control
-        function toggleRotation() {
-            if (autoRotationSpeed === 0) {
-                autoRotationSpeed = 0.005;
-            } else {
-                autoRotationSpeed = 0;
-            }
+            return { lat: lats / count, lng: lngs / count };
         }
-
-        function toggleHeatWaves() {
-            showHeatWaves = !showHeatWaves;
-        }
-
-        function resetView() {
-            camera.position.set(0, 0, 15);
-            rotation = { x: 0.3, y: 0 };
-            autoRotate = true;
-        }
-
-        // Actualizar estadísticas
-        function updateStats() {
-            document.getElementById('active-points').textContent = heatPoints.length;
-            const avgTemp = (heatPoints.reduce((sum, p) => sum + p.temp, 0) / heatPoints.length).toFixed(1);
-            document.getElementById('avg-temp').textContent = avgTemp;
-            const maxInt = Math.max(...heatPoints.map(p => p.intensity)) * 100;
-            document.getElementById('max-intensity').textContent = maxInt.toFixed(0);
-        }
-
-        updateStats();
-
-        // Animación principal
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            const time = Date.now() * 0.001;
-            
-            // Rotación automática continua del mundo
-            rotation.y += autoRotationSpeed;
-            
-            // Rotar tierra con movimiento continuo
-            earth.rotation.y = rotation.y;
-            earth.rotation.x = rotation.x;
-            land.rotation.y = rotation.y;
-            land.rotation.x = rotation.x;
-            
-            // Atmósfera rota más lento para efecto de profundidad
-            atmosphere.rotation.y = rotation.y * 0.95;
-            atmosphere.rotation.x = rotation.x * 0.95;
-            
-            // Animar puntos de calor con movimiento 3D
-            heatPointData.forEach((data, i) => {
-                const phase = time + data.phase;
-                
-                // Pulsación del punto principal
-                const scale = 1 + Math.sin(phase * 2) * 0.3;
-                data.point.scale.setScalar(scale);
-                
-                // Movimiento flotante
-                const floatOffset = Math.sin(phase) * 0.05;
-                const newPos = data.originalPos.clone().multiplyScalar(1 + floatOffset);
-                data.point.position.copy(newPos);
-                
-                // Rotación local
-                data.point.rotation.y += 0.02;
-                
-                // Animar capas de glow
-                data.glows.forEach((glow, j) => {
-                    const glowScale = 1 + Math.sin(phase * 1.5 - j * 0.5) * 0.4;
-                    glow.scale.setScalar(glowScale);
-                    glow.position.copy(newPos);
-                    glow.material.opacity = 0.3 - j * 0.1 + Math.sin(phase * 2) * 0.1;
-                });
-                
-                // Animar ondas de calor
-                if (showHeatWaves) {
-                    data.wave.visible = true;
-                    const waveScale = 1 + (phase % 2) * 2;
-                    data.wave.scale.setScalar(waveScale);
-                    data.wave.material.opacity = Math.max(0, 0.5 - (phase % 2) * 0.25);
-                    data.wave.position.copy(newPos);
-                } else {
-                    data.wave.visible = false;
-                }
-                
-                // Rotar con la tierra
-                const tempEuler = new THREE.Euler(rotation.x, rotation.y, 0, 'XYZ');
-                data.point.quaternion.setFromEuler(tempEuler);
-                data.glows.forEach(glow => glow.quaternion.setFromEuler(tempEuler));
-                data.wave.quaternion.setFromEuler(tempEuler);
-            });
-            
-            renderer.render(scene, camera);
-        }
-
-        // Responsive
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-
-        animate();
     </script>
 </body>
 </html>
