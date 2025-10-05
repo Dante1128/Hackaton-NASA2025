@@ -17,6 +17,11 @@
         <ul id="country-list">
             <li>Cargando países...</li>
         </ul>
+        
+        <!-- Nuevo botón para redirigir a la página de noticias -->
+        <button id="news-button" class="news-btn">
+            Ver Noticias Completas
+        </button>
     </div>
     
     <!-- Pantalla de carga -->
@@ -40,14 +45,22 @@
     </div>
 
     <!-- JavaScript externo -->
-    <!-- JavaScript externo -->
     <script src="js/utils.js"></script>
     <script src="js/data-loader.js"></script>
-    <script src="js/weather-service.js"></script>  <!-- NUEVO -->
+    <script src="js/weather-service.js"></script>
     <script src="js/globe.js"></script>
     <script src="js/app.js"></script>
     
-        
-
+    <script>
+        // Agregar funcionalidad al botón de noticias
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsButton = document.getElementById('news-button');
+            if (newsButton) {
+                newsButton.addEventListener('click', function() {
+                    window.location.href = 'news_page/news_page.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
