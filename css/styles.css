@@ -216,3 +216,29 @@ body {
 .weather-forecast-item:last-child {
     border-bottom: none;
 }
+
+/* Estilos para el botón de noticias */
+.news-btn {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #1a2a6c, #2a4a8c);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.news-btn:hover {
+    background: linear-gradient(135deg, #2a4a8c, #3a6acc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.news-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
