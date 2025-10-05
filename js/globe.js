@@ -28,9 +28,9 @@ function initializeGlobe() {
         .polygonsTransitionDuration(200)
         
         // Configuraciones de puntos optimizadas - ACTUALIZADO
-        .pointColor(() => '#ff4444')
+        .pointColor(() => '#fa5050ff')
         .pointAltitude(0.01)
-        .pointRadius(0.8)
+        .pointRadius(0.15)
         .pointLabel(d => `
             <div style="padding: 10px; max-width: 250px;">
                 <b>${d.name}</b><br>
@@ -112,7 +112,7 @@ async function showPointDetails(point) {
                 </div>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin-top: 0; color: #1565c0;">🌤️ Clima Actual</h4>
+                    <h4 style="margin-top: 0; color: #1565c0;">🌤 Clima Actual</h4>
                     <div style="font-size: 14px;">
                         ${weatherInfo.replace(/\|/g, '<br>')}
                     </div>
@@ -144,7 +144,7 @@ async function showPointDetails(point) {
         console.error('Error loading weather data:', error);
         const errorContent = `
             <div style="padding: 20px; text-align: center;">
-                <div style="color: #dc3545; font-size: 48px;">⚠️</div>
+                <div style="color: #dc3545; font-size: 48px;">⚠</div>
                 <h3>Error al cargar datos</h3>
                 <p>No se pudieron cargar los datos del clima.</p>
                 <button onclick="this.parentElement.parentElement.remove()" 
@@ -245,7 +245,7 @@ async function showDetailedWeather(lat, lng, locationName = 'Ubicación') {
                 </h3>
                 
                 <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                    <h4 style="margin-top: 0;">🌡️ Condiciones Actuales</h4>
+                    <h4 style="margin-top: 0;">🌡 Condiciones Actuales</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 14px;">
                         <div>Temperature: ${current.temperature}${current.units.temperature_2m}</div>
                         <div>Humedad: ${current.humidity}%</div>
@@ -314,6 +314,142 @@ async function showDetailedWeather(lat, lng, locationName = 'Ubicación') {
                 <h3>Error al cargar pronóstico</h3>
                 <p>No se pudieron cargar los datos del pronóstico extendido.</p>
                 <button onclick="this.parentElement.parentElement.remove(); document.getElementById('modal-overlay').remove();" 
+                        style="background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                    Cerrar
+                </button>
+            </div>
+        `;
+        
+        const modal = document.getElementById('weather-modal');
+        if (modal) {
+            modal.innerHTML = errorContent;
+        }
+    }
+}
+
+
+// Servicio para obtener recomendaciones de Gemini
+const GeminiService = {
+    async getRecommendations(weatherData) {
+        try {
+            const prompt = `Basándome en las siguientes condiciones climáticas actuales:
+- Temperatura: ${weatherData.temperature}°C
+- Humedad: ${weatherData.humidity}%
+- Velocidad del viento: ${weatherData.windSpeed} km/h
+- Precipitación: ${weatherData.precipitation}mm
+
+Por favor proporciona EXACTAMENTE 3 recomendaciones breves y prácticas (máximo 15 palabras cada una) para las personas en esta ubicación. Responde solo con las 3 recomendaciones separadas por el símbolo "|" sin numeración ni viñetas.`;
+
+            const response = await fetch('http://127.0.0.1:8000/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt })
+            });
+
+            if (!response.ok) {
+                throw new Error('Error en la API de Gemini');
+            }
+
+            const data = await response.json();
+            return data.response || data.text || 'No se pudieron obtener recomendaciones';
+        } catch (error) {
+            console.error('Error getting recommendations:', error);
+            return null;
+        }
+    }
+};
+
+// FUNCIÓN ACTUALIZADA: Mostrar detalles del punto con clima
+async function showPointDetails(point) {
+    console.log('Showing details for point:', point); // Debug
+    
+    // Mostrar mensaje de carga inmediatamente
+    const loadingContent = `
+        <div style="padding: 20px; text-align: center;">
+            <div class="loading" style="margin: 0 auto;"></div>
+            <p>Cargando datos del clima...</p>
+        </div>
+    `;
+    showModal(loadingContent);
+
+    try {
+        const weatherInfo = await WeatherService.getWeatherSummary(point.lat, point.lng);
+        const currentWeather = await WeatherService.getCurrentWeather(point.lat, point.lng);
+        const weatherIcon = WeatherService.getWeatherIcon(currentWeather);
+        
+        // Obtener recomendaciones de Gemini
+        const recommendations = await GeminiService.getRecommendations(currentWeather);
+        
+        let recommendationsHTML = '';
+        if (recommendations) {
+            const recList = recommendations.split('|').map(r => r.trim()).filter(r => r);
+            recommendationsHTML = `
+                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="margin-top: 0; color: #856404;">💡 Recomendaciones IA</h4>
+                    <div style="font-size: 13px; line-height: 1.6;">
+                        ${recList.map((rec, idx) => `
+                            <div style="margin: 8px 0; padding: 8px; background: rgba(255,255,255,0.5); border-radius: 4px;">
+                                <strong>${idx + 1}.</strong> ${rec}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        const details = `
+            <div style="padding: 20px; max-width: 350px;">
+                <h3 style="margin-top: 0; color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
+                    ${weatherIcon} ${point.name}
+                </h3>
+                
+                <div style="margin-bottom: 15px;">
+                    <p><strong>📍 País:</strong> ${point.country?.name || 'N/A'}</p>
+                    <p><strong>🔧 Sensor:</strong> ${point.sensorName || 'N/A'}</p>
+                    <p><strong>🌐 Coordenadas:</strong> ${point.lat?.toFixed(4)}, ${point.lng?.toFixed(4)}</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="margin-top: 0; color: #1565c0;">🌤 Clima Actual</h4>
+                    <div style="font-size: 14px;">
+                        ${weatherInfo.replace(/\|/g, '<br>')}
+                    </div>
+                </div>
+                
+                ${recommendationsHTML}
+                
+                <button onclick="showDetailedWeather(${point.lat}, ${point.lng}, '${point.name}')" 
+                        style="width: 100%; background: #007bff; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-size: 14px; transition: background 0.3s;">
+                    📅 Ver Pronóstico 5 Días
+                </button>
+                
+                <div style="margin-top: 10px; font-size: 11px; color: #666; text-align: center;">
+                    Datos en tiempo real de Open-Meteo ${recommendations ? '• Recomendaciones por Gemini AI' : ''}
+                </div>
+            </div>
+        `;
+        
+        // Reemplazar el modal de carga con el contenido real
+        const modal = document.getElementById('weather-modal');
+        if (modal) {
+            modal.innerHTML = details + `
+                <button onclick="this.parentElement.remove()" 
+                        style="position: absolute; top: 10px; right: 10px; background: #dc3545; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; font-size: 16px;">
+                    ×
+                </button>
+            `;
+        }
+        
+    } catch (error) {
+        console.error('Error loading weather data:', error);
+        const errorContent = `
+            <div style="padding: 20px; text-align: center;">
+                <div style="color: #dc3545; font-size: 48px;">⚠</div>
+                <h3>Error al cargar datos</h3>
+                <p>No se pudieron cargar los datos del clima.</p>
+                <button onclick="this.parentElement.parentElement.remove()" 
                         style="background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
                     Cerrar
                 </button>
