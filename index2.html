@@ -548,7 +548,7 @@
         async function loadDataPoints() {
             try {
                 Utils.updateProgress(40);
-                const response = await fetch('verde2.json');
+                const response = await fetch('verde.json');
                 const rawPoints = await response.json();
                 
                 AppState.allPointsData = rawPoints.map(p => ({
