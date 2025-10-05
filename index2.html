@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mundi 3D Interactivo con Puntos de Datos</title>
+    <title>Mapa 3D - Biodiversidad en Riesgo</title>
     
     <style>
         * {
@@ -36,7 +36,6 @@
             overflow-y: auto;
             z-index: 1000;
             box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
         }
 
         #sidebar h3 {
@@ -70,7 +69,6 @@
             font-weight: bold;
         }
 
-        /* Panel de control temporal */
         #time-control {
             position: fixed;
             top: 20px;
@@ -258,15 +256,180 @@
             100% { transform: translateX(-100%); }
         }
 
+        /* Modal de alertas sobre el país */
+        .country-alert-modal {
+            position: absolute;
+            pointer-events: none;
+            z-index: 10000;
+            transition: opacity 0.3s ease;
+        }
+
+        .extinction-alert {
+            background: rgba(139, 0, 0, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 6px 8px;
+            border-radius: 4px;
+            border: 1px solid #ff4444;
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 68, 68, 0.2);
+            animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            color: white;
+            min-width: 140px;
+            max-width: 180px;
+            position: relative;
+            font-size: 0.65em;
+        }
+
+        .extinction-alert::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid rgba(139, 0, 0, 0.98);
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+        }
+
+        .extinction-alert.warning {
+            background: rgba(255, 140, 0, 0.98);
+            border-color: #ffa500;
+            box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2);
+        }
+
+        .extinction-alert.warning::before {
+            border-top-color: rgba(255, 140, 0, 0.98);
+        }
+
+        .extinction-alert h4 {
+            margin: 0 0 3px 0;
+            font-size: 0.85em;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .extinction-alert h4::before {
+            content: '⚠️';
+            font-size: 0.9em;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .extinction-alert p {
+            margin: 2px 0;
+            font-size: 0.8em;
+            line-height: 1.2;
+        }
+
+        .extinction-alert .species-list {
+            margin-top: 3px;
+            padding: 3px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 2px;
+            font-size: 0.75em;
+        }
+
+        .extinction-alert .species-item {
+            margin: 1px 0;
+            padding-left: 10px;
+            position: relative;
+            opacity: 0;
+            animation: slideInLeft 0.2s ease-out forwards;
+            font-size: 0.8em;
+        }
+
+        .extinction-alert .species-item:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .extinction-alert .species-item:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .extinction-alert .species-item:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .extinction-alert .species-item:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .extinction-alert .species-item:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+
+        .extinction-alert .species-item::before {
+            content: '•';
+            position: absolute;
+            left: 5px;
+            color: #ff6666;
+            font-weight: bold;
+        }
+
+        .extinction-alert.warning .species-item::before {
+            color: #ffcc66;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0) translateY(-10px);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05) translateY(0);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.15);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.6) translateY(-15px);
+            }
+        }
+
         @media (max-width: 768px) {
             #sidebar {
                 width: 100%;
                 height: auto;
                 max-height: 40vh;
-                transform: translateY(-100%);
             }
             #time-control {
                 width: calc(100% - 40px);
+            }
+            #extinction-alerts {
+                width: calc(100% - 40px);
+                right: 20px;
+                left: 20px;
             }
         }
         /* Botón flotante para regresar */
@@ -319,8 +482,8 @@
             <button onclick="resetAnimation()">Reset</button>
         </div>
         <div class="stats-box">
-            <p><strong>Puntos verdes:</strong> <span id="green-points">0</span></p>
-            <p><strong>Puntos perdidos:</strong> <span id="lost-points">0</span></p>
+            <p><strong>Ecosistemas activos:</strong> <span id="green-points">0</span></p>
+            <p><strong>Ecosistemas perdidos:</strong> <span id="lost-points">0</span></p>
             <p><strong>Volumen total:</strong> <span id="total-volume">0</span></p>
         </div>
     </div>
@@ -336,7 +499,7 @@
     
     <div id="news-ticker">
         <div class="ticker-container">
-            <div class="ticker-label">EVOLUCIÓN TEMPORAL</div>
+            <div class="ticker-label">BIODIVERSIDAD</div>
             <div id="ticker-content" class="ticker-content">
                 <span>Visualización de cambios ambientales desde 2000 hasta 2100</span>
             </div>
@@ -365,7 +528,83 @@
             allPointsData: [],
             currentYear: 2000,
             isPlaying: false,
-            animationInterval: null
+            animationInterval: null,
+            extinctionEvents: [],
+            alertQueue: [],
+            isProcessingAlerts: false,
+            activeModals: []
+        };
+
+        // Base de datos de especies por país
+        const SPECIES_DATABASE = {
+            'Brazil': {
+                fauna: ['Jaguar amazónico', 'Guacamayo azul', 'Mono araña', 'Delfín rosado', 'Oso hormiguero gigante'],
+                flora: ['Caoba brasileña', 'Árbol de caucho', 'Victoria amazónica', 'Orquídea imperial', 'Palmera juçara']
+            },
+            'Indonesia': {
+                fauna: ['Orangután de Sumatra', 'Tigre de Java', 'Rinoceronte de Java', 'Dragón de Komodo', 'Elefante de Borneo'],
+                flora: ['Rafflesia arnoldii', 'Sándalo', 'Ébano de Célebes', 'Orquídea negra', 'Manglar rojo']
+            },
+            'Madagascar': {
+                fauna: ['Lémur de cola anillada', 'Fossa', 'Camaleón pantera', 'Tortuga radiada', 'Aye-aye'],
+                flora: ['Baobab de Madagascar', 'Palma del viajero', 'Pachypodium', 'Aloe capitata', 'Voanioala gerardii']
+            },
+            'Australia': {
+                fauna: ['Koala', 'Demonio de Tasmania', 'Numbat', 'Quoll moteado', 'Cacatúa negra'],
+                flora: ['Eucalipto azul', 'Acacia dorada', 'Banksia gigante', 'Waratah', 'Hierba canguro']
+            },
+            'Peru': {
+                fauna: ['Oso de anteojos', 'Cóndor andino', 'Gallito de las rocas', 'Nutria gigante', 'Mono choro'],
+                flora: ['Quina', 'Puya Raimondi', 'Caoba peruana', 'Orquídea de Machu Picchu', 'Árbol de la quina']
+            },
+            'Colombia': {
+                fauna: ['Cóndor de los Andes', 'Jaguar', 'Oso de anteojos', 'Delfín rosado', 'Guacamayo verde'],
+                flora: ['Palma de cera del Quindío', 'Orquídea Cattleya', 'Ceiba', 'Frailejón', 'Yarumo']
+            },
+            'Mexico': {
+                fauna: ['Jaguar mexicano', 'Vaquita marina', 'Lobo mexicano', 'Ajolote', 'Quetzal mesoamericano'],
+                flora: ['Agave azul', 'Cactus saguaro', 'Dalia', 'Orquídea laelia', 'Ceiba pentandra']
+            },
+            'Ecuador': {
+                fauna: ['Cóndor andino', 'Puma', 'Oso de anteojos', 'Tortuga galápagos', 'Colibrí estrella'],
+                flora: ['Orquídea ecuatoriana', 'Cedro', 'Palma tagua', 'Guayacán', 'Arrayán']
+            },
+            'Argentina': {
+                fauna: ['Yaguareté', 'Huemul', 'Cóndor', 'Guanaco', 'Ñandú'],
+                flora: ['Araucaria', 'Alerce', 'Quebracho', 'Ceibo', 'Jacarandá']
+            },
+            'Chile': {
+                fauna: ['Huemul', 'Puma', 'Cóndor', 'Pudú', 'Zorro de Darwin'],
+                flora: ['Araucaria', 'Alerce milenario', 'Ciprés de la cordillera', 'Boldo', 'Copihue']
+            },
+            'Bolivia': {
+                fauna: ['Jaguar', 'Oso de anteojos', 'Cóndor', 'Vicuña', 'Flamenco andino'],
+                flora: ['Queñua', 'Totora', 'Palma real', 'Mara', 'Kantuta']
+            },
+            'Venezuela': {
+                fauna: ['Jaguar', 'Oso frontino', 'Cóndor', 'Guacamayo verde', 'Delfín rosado'],
+                flora: ['Araguaney', 'Sarrapia', 'Caoba venezolana', 'Orquídea nacional', 'Palma moriche']
+            },
+            'India': {
+                fauna: ['Tigre de Bengala', 'Elefante asiático', 'Rinoceronte indio', 'Leopardo de las nieves', 'Cobra real'],
+                flora: ['Loto sagrado', 'Neem', 'Baniano', 'Sándalo indio', 'Teca']
+            },
+            'China': {
+                fauna: ['Panda gigante', 'Tigre de Amur', 'Leopardo de las nieves', 'Grulla de cuello negro', 'Delfín del Yangtsé'],
+                flora: ['Ginkgo biloba', 'Bambú gigante', 'Metasequoia', 'Pino de China', 'Árbol de los farolillos']
+            },
+            'Congo': {
+                fauna: ['Gorila de montaña', 'Bonobo', 'Okapi', 'Elefante de bosque', 'Chimpancé'],
+                flora: ['Caoba africana', 'Ébano', 'Árbol de teca africana', 'Palma de aceite', 'Ceiba africana']
+            },
+            'Kenya': {
+                fauna: ['León', 'Elefante africano', 'Rinoceronte negro', 'Guepardo', 'Jirafa'],
+                flora: ['Baobab africano', 'Acacia sombrilla', 'Sicomoro', 'Aloe vera', 'Neem africano']
+            },
+            'Default': {
+                fauna: ['Especies de fauna local', 'Mamíferos endémicos', 'Aves migratorias', 'Reptiles nativos', 'Anfibios locales'],
+                flora: ['Árboles nativos', 'Plantas endémicas', 'Flores silvestres', 'Arbustos autóctonos', 'Vegetación riparia']
+            }
         };
 
         const Utils = {
@@ -399,6 +638,44 @@
             }
         };
 
+        function getSpeciesForCountry(country) {
+            return SPECIES_DATABASE[country] || SPECIES_DATABASE['Default'];
+        }
+
+        function getSpeciesInfo(point) {
+            if (!point.country) return '';
+            const species = getSpeciesForCountry(point.country);
+            const yearsSinceStart = AppState.currentYear - (point.yearStart || 2000);
+            const progress = yearsSinceStart / (point.lifespan || 50);
+            
+            if (point.isDead) {
+                return `
+                    <hr style="border-color: rgba(255,255,255,0.2); margin: 8px 0;">
+                    <span style="color: #ff9999; font-size: 0.85em;">
+                        🦴 Fauna extinta: ${species.fauna.slice(0, 2).join(', ')}<br>
+                        🍂 Flora perdida: ${species.flora.slice(0, 2).join(', ')}
+                    </span>
+                `;
+            } else if (progress > 0.7) {
+                return `
+                    <hr style="border-color: rgba(255,255,255,0.2); margin: 8px 0;">
+                    <span style="color: #ffcc66; font-size: 0.85em;">
+                        ⚠️ En peligro crítico:<br>
+                        🦁 ${species.fauna[0]}<br>
+                        🌿 ${species.flora[0]}
+                    </span>
+                `;
+            } else {
+                return `
+                    <hr style="border-color: rgba(255,255,255,0.2); margin: 8px 0;">
+                    <span style="color: #99ff99; font-size: 0.85em;">
+                        🌍 Biodiversidad protegida:<br>
+                        ${species.fauna[0]}, ${species.flora[0]}
+                    </span>
+                `;
+            }
+        }
+
         const GlobeUpdaters = {
             updateColors: () => feat => 
                 feat.properties.ADMIN === AppState.selectedCountry ? '#ff0000' : 'rgba(0, 0, 255, 0.15)',
@@ -430,6 +707,170 @@
             };
         }
 
+        function addExtinctionAlert(point, year) {
+            const country = point.country || 'Desconocido';
+            const species = getSpeciesForCountry(country);
+            
+            // Agregar a la cola en lugar de mostrar inmediatamente
+            AppState.alertQueue.push({
+                type: 'extinction',
+                point,
+                year,
+                country,
+                species
+            });
+            
+            // Iniciar el procesamiento de la cola si no está activo
+            if (!AppState.isProcessingAlerts) {
+                processAlertQueue();
+            }
+            
+            AppState.extinctionEvents.push({
+                year,
+                country,
+                point,
+                species
+            });
+        }
+
+        function addWarningAlert(point, year) {
+            const country = point.country || 'Desconocido';
+            const species = getSpeciesForCountry(country);
+            
+            // Agregar a la cola
+            AppState.alertQueue.push({
+                type: 'warning',
+                point,
+                year,
+                country,
+                species
+            });
+            
+            if (!AppState.isProcessingAlerts) {
+                processAlertQueue();
+            }
+        }
+
+        function processAlertQueue() {
+            if (AppState.alertQueue.length === 0) {
+                AppState.isProcessingAlerts = false;
+                return;
+            }
+            
+            // Limitar a 2 modales activos máximo (antes eran 3)
+            if (AppState.activeModals.length >= 2) {
+                setTimeout(() => processAlertQueue(), CONFIG.animationSpeed);
+                return;
+            }
+            
+            AppState.isProcessingAlerts = true;
+            const alertData = AppState.alertQueue.shift();
+            
+            // Mostrar el modal
+            showAlertModal(alertData);
+            
+            // Esperar el mismo tiempo que tarda en cambiar de año (300ms)
+            setTimeout(() => {
+                processAlertQueue();
+            }, CONFIG.animationSpeed);
+        }
+
+        function showAlertModal(alertData) {
+            const { type, point, year, country, species } = alertData;
+            
+            // Crear el modal
+            const modal = document.createElement('div');
+            modal.className = 'country-alert-modal';
+            
+            const alert = document.createElement('div');
+            alert.className = type === 'warning' ? 'extinction-alert warning' : 'extinction-alert';
+            
+            if (type === 'extinction') {
+                alert.innerHTML = `
+                    <h4>PÉRDIDA</h4>
+                    <p><strong>📍 ${country}</strong> | ${year}</p>
+                    <div class="species-list">
+                        ${species.fauna.slice(0, 1).map(s => `<div class="species-item">🦴 ${s}</div>`).join('')}
+                        ${species.flora.slice(0, 1).map(s => `<div class="species-item">🍂 ${s}</div>`).join('')}
+                    </div>
+                `;
+            } else {
+                alert.innerHTML = `
+                    <h4>CRÍTICO</h4>
+                    <p><strong>📍 ${country}</strong> | ${year}</p>
+                    <div class="species-list">
+                        <div class="species-item">🦁 ${species.fauna[0]}</div>
+                        <div class="species-item">🌿 ${species.flora[0]}</div>
+                    </div>
+                `;
+            }
+            
+            modal.appendChild(alert);
+            document.body.appendChild(modal);
+            
+            // Agregar a la lista de modales activos
+            AppState.activeModals.push(modal);
+            
+            // Posicionar el modal sobre el país
+            positionModalOverCountry(modal, point);
+            
+            // Duración muy corta para sincronizar con el ritmo de años (300ms)
+            const duration = type === 'warning' ? 1200 : 1500;
+            
+            // Remover después del tiempo especificado
+            setTimeout(() => {
+                alert.style.animation = 'fadeOut 0.2s ease-out forwards';
+                setTimeout(() => {
+                    modal.remove();
+                    // Remover de la lista de modales activos
+                    const index = AppState.activeModals.indexOf(modal);
+                    if (index > -1) {
+                        AppState.activeModals.splice(index, 1);
+                    }
+                }, 200);
+            }, duration);
+        }
+
+        function positionModalOverCountry(modal, point) {
+            if (!point.lat || !point.lng || !AppState.globe) return;
+            
+            // Convertir coordenadas geográficas a coordenadas de pantalla
+            const coords = AppState.globe.getScreenCoords(point.lat, point.lng);
+            
+            if (coords) {
+                // Posicionar el modal centrado sobre el país
+                modal.style.left = coords.x + 'px';
+                modal.style.top = (coords.y - 60) + 'px'; // 60px arriba del punto (más cerca)
+                modal.style.transform = 'translateX(-50%)';
+            }
+            
+            // Actualizar posición cuando la cámara se mueva
+            const updatePosition = () => {
+                const newCoords = AppState.globe.getScreenCoords(point.lat, point.lng);
+                if (newCoords && modal.parentElement) {
+                    modal.style.left = newCoords.x + 'px';
+                    modal.style.top = (newCoords.y - 60) + 'px'; // Mantener 60px consistente
+                    requestAnimationFrame(updatePosition);
+                }
+            };
+            
+            requestAnimationFrame(updatePosition);
+        }
+
+        function updateTickerMessage(greenCount, lostCount, year) {
+            const tickerContent = document.getElementById('ticker-content');
+            const recentExtinctions = AppState.extinctionEvents
+                .filter(e => e.year === year)
+                .map(e => `${e.country}: ${e.species.fauna[0]} y ${e.species.flora[0]} en riesgo`)
+                .join(' | ');
+            
+            const message = recentExtinctions 
+                ? `AÑO ${year} - ALERTAS: ${recentExtinctions} | Puntos activos: ${greenCount} | Puntos perdidos: ${lostCount}`
+                : `AÑO ${year} - Biodiversidad global: ${greenCount} ecosistemas activos | ${lostCount} ecosistemas perdidos | Monitoreo continuo...`;
+            
+            tickerContent.innerHTML = `<span>${message}</span>`;
+        }
+
         function filterPointsByYear(year) {
             const visiblePoints = [];
             let greenCount = 0;
@@ -442,9 +883,17 @@
 
                 if (state.isDead) {
                     lostCount++;
+                    if (year === point.yearStart + (point.lifespan || 50)) {
+                        addExtinctionAlert(point, year);
+                    }
                 } else {
                     greenCount++;
                     totalVolume += state.volume;
+                    
+                    const deathProgress = (year - point.yearStart) / (point.lifespan || 50);
+                    if (deathProgress >= 0.9 && deathProgress < 0.91) {
+                        addWarningAlert(point, year);
+                    }
                 }
 
                 visiblePoints.push({
@@ -460,6 +909,8 @@
             document.getElementById('green-points').textContent = greenCount;
             document.getElementById('lost-points').textContent = lostCount;
             document.getElementById('total-volume').textContent = totalVolume.toFixed(2);
+
+            updateTickerMessage(greenCount, lostCount, year);
 
             return visiblePoints;
         }
@@ -511,6 +962,18 @@
             AppState.isPlaying = false;
             document.getElementById('play-btn').textContent = 'Play';
             document.getElementById('play-btn').classList.remove('playing');
+            AppState.extinctionEvents = [];
+            AppState.alertQueue = [];
+            AppState.isProcessingAlerts = false;
+            
+            // Limpiar todos los modales activos
+            AppState.activeModals.forEach(modal => {
+                if (modal && modal.parentElement) {
+                    modal.remove();
+                }
+            });
+            AppState.activeModals = [];
+            
             updateYear(CONFIG.minYear);
         }
 
@@ -532,11 +995,14 @@
                 .pointAltitude(d => d.altitude || CONFIG.defaultAltitude)
                 .pointRadius(d => d.radius || 0.5)
                 .pointLabel(d => `
-                    <div style="padding: 10px; max-width: 250px; background: rgba(0,0,0,0.9); border-radius: 5px;">
-                        <b>${d.name || 'Punto'}</b><br>
-                        País: ${d.country || 'N/A'}<br>
-                        Volumen actual: ${d.currentVolume ? d.currentVolume.toFixed(2) : 'N/A'}<br>
-                        Estado: ${d.isDead ? 'Perdido' : 'Activo'}<br>
+                    <div style="padding: 12px; max-width: 280px; background: rgba(0,0,0,0.95); border-radius: 8px; border-left: 3px solid ${d.isDead ? '#8B4513' : '#00ff00'};">
+                        <b style="color: ${d.isDead ? '#ff6666' : '#66ff66'};">${d.name || 'Ecosistema'}</b><br>
+                        <span style="font-size: 0.9em;">
+                            📍 País: ${d.country || 'N/A'}<br>
+                            📊 Volumen: ${d.currentVolume ? d.currentVolume.toFixed(2) : 'N/A'}<br>
+                            ${d.isDead ? '💀 Estado: <span style="color: #ff6666;">PERDIDO</span>' : '✅ Estado: <span style="color: #66ff66;">ACTIVO</span>'}<br>
+                            ${getSpeciesInfo(d)}
+                        </span>
                     </div>
                 `)
                 .onPointClick(d => {
