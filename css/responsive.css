@@ -1,0 +1,54 @@
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 150px;
+    }
+    
+    #sidebar h3 {
+        font-size: 14px;
+    }
+    
+    #country-list li {
+        padding: 6px 3px;
+        font-size: 14px;
+    }
+    
+    .ticker-label {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .ticker-content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --sidebar-width: 120px;
+        --ticker-height: 40px;
+    }
+    
+    #sidebar h3 {
+        font-size: 12px;
+    }
+    
+    #country-list li {
+        padding: 4px 2px;
+        font-size: 12px;
+    }
+    
+    .ticker-container {
+        padding: 0 8px;
+    }
+    
+    .ticker-label {
+        font-size: 10px;
+        padding: 3px 6px;
+        margin-right: 8px;
+    }
+    
+    .ticker-content {
+        font-size: 12px;
+    }
+}

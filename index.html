@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mundi 3D Interactivo con Puntos de Datos</title>
+    
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <h3>Selecciona un País</h3>
+        <ul id="country-list">
+            <li>Cargando países...</li>
+        </ul>
+    </div>
+    
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <div>Cargando mapa 3D...</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+    
+    <div id="globeViz"></div>
+    
+    <!-- Barra de noticias en el footer -->
+    <div id="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-label">ÚLTIMAS NOTICIAS</div>
+            <div id="ticker-content" class="ticker-content">
+                <span class="loading"></span>Cargando noticias...
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript externo -->
+    <!-- JavaScript externo -->
+    <script src="js/utils.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/weather-service.js"></script>  <!-- NUEVO -->
+    <script src="js/globe.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
