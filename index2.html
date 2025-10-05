@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mundi 3D Interactivo con Puntos de Datos</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+
+        #globeViz {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            color: #4fc3f7;
+            border-bottom: 2px solid #4fc3f7;
+            padding-bottom: 10px;
+        }
+
+        #country-list {
+            list-style: none;
+        }
+
+        #country-list li {
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        #country-list li:hover {
+            background: rgba(79, 195, 247, 0.3);
+            transform: translateX(5px);
+        }
+
+        #country-list li.selected {
+            background: rgba(79, 195, 247, 0.5);
+            font-weight: bold;
+        }
+
+        /* Panel de control temporal */
+        #time-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            min-width: 320px;
+        }
+
+        #time-control h3 {
+            margin-bottom: 15px;
+            color: #4fc3f7;
+            font-size: 1.1em;
+            border-bottom: 2px solid #4fc3f7;
+            padding-bottom: 8px;
+        }
+
+        #year-display {
+            font-size: 2.8em;
+            font-weight: bold;
+            text-align: center;
+            color: #4fc3f7;
+            margin: 15px 0;
+            text-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .control-buttons button {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #4fc3f7, #03a9f4);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .control-buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+        }
+
+        .control-buttons button.playing {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+            -webkit-appearance: none;
+            margin: 15px 0;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4fc3f7;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4fc3f7;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+            border: none;
+        }
+
+        .stats-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .stats-box p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        .stats-box strong {
+            color: #4fc3f7;
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .progress-bar {
+            width: 300px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4fc3f7, #03a9f4);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        #news-ticker {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            z-index: 999;
+            border-top: 2px solid #4fc3f7;
+            box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .ticker-container {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .ticker-label {
+            background: #4fc3f7;
+            color: #000;
+            padding: 0 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .ticker-content {
+            flex: 1;
+            padding: 0 20px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .ticker-content span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 60s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                max-height: 40vh;
+                transform: translateY(-100%);
+            }
+            #time-control {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+    
+    <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <h3>Selecciona un País</h3>
+        <ul id="country-list">
+            <li>Cargando países...</li>
+        </ul>
+    </div>
+
+    <div id="time-control">
+        <h3>Control Temporal</h3>
+        <div id="year-display">2000</div>
+        <input type="range" id="year-slider" min="2000" max="2100" value="2000" step="1">
+        <div class="control-buttons">
+            <button id="play-btn" onclick="toggleAnimation()">Play</button>
+            <button onclick="resetAnimation()">Reset</button>
+        </div>
+        <div class="stats-box">
+            <p><strong>Puntos verdes:</strong> <span id="green-points">0</span></p>
+            <p><strong>Puntos perdidos:</strong> <span id="lost-points">0</span></p>
+            <p><strong>Volumen total:</strong> <span id="total-volume">0</span></p>
+        </div>
+    </div>
+    
+    <div id="loading-screen">
+        <div>Cargando mapa 3D...</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+    
+    <div id="globeViz"></div>
+    
+    <div id="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-label">EVOLUCIÓN TEMPORAL</div>
+            <div id="ticker-content" class="ticker-content">
+                <span>Visualización de cambios ambientales desde 2000 hasta 2100</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CONFIG = {
+            defaultAltitude: 0.01,
+            selectedAltitude: 0.1,
+            hoverAltitude: 0.05,
+            polygonResolution: 4,
+            minYear: 2000,
+            maxYear: 2100,
+            animationSpeed: 300
+        };
+
+        const AppState = {
+            globe: null,
+            countriesData: null,
+            selectedCountry: null,
+            allPointsData: [],
+            currentYear: 2000,
+            isPlaying: false,
+            animationInterval: null
+        };
+
+        const Utils = {
+            updateProgress: (percent) => {
+                const fill = document.getElementById('progress-fill');
+                if (fill) fill.style.width = percent + '%';
+            },
+            
+            hideLoading: (message) => {
+                const screen = document.getElementById('loading-screen');
+                if (message) {
+                    screen.innerHTML = `<div>${message}</div>`;
+                    setTimeout(() => screen.style.display = 'none', 2000);
+                } else {
+                    screen.style.display = 'none';
+                }
+            },
+            
+            debounce: (func, wait) => {
+                let timeout;
+                return function(...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func(...args), wait);
+                };
+            },
+
+            interpolateColor: (ratio) => {
+                const green = Math.floor(255 * (1 - ratio));
+                const red = Math.floor(255 * ratio);
+                return `rgb(${red}, ${green}, 0)`;
+            }
+        };
+
+        const GlobeUpdaters = {
+            updateColors: () => feat => 
+                feat.properties.ADMIN === AppState.selectedCountry ? '#ff0000' : 'rgba(0, 0, 255, 0.15)',
+            
+            updateAltitude: () => feat => 
+                feat.properties.ADMIN === AppState.selectedCountry ? CONFIG.selectedAltitude : CONFIG.defaultAltitude
+        };
+
+        function calculatePointState(point, year) {
+            if (!point.yearStart) return null;
+            
+            const yearsSinceStart = year - point.yearStart;
+            const deathYear = point.yearStart + (point.lifespan || 50);
+            
+            if (year < point.yearStart) return null;
+            if (year >= deathYear) {
+                return { isDead: true, color: '#8B4513', altitude: 0.005, radius: 0.3 };
+            }
+            
+            const deathProgress = yearsSinceStart / (point.lifespan || 50);
+            const volumeGrowth = 1 + (deathProgress * 2);
+            
+            return {
+                isDead: false,
+                color: Utils.interpolateColor(deathProgress),
+                altitude: Math.max(0.005, CONFIG.defaultAltitude * (1 - deathProgress * 0.7)),
+                radius: 0.5 + (deathProgress * 1.5),
+                volume: (point.baseVolume || 1) * volumeGrowth
+            };
+        }
+
+        function filterPointsByYear(year) {
+            const visiblePoints = [];
+            let greenCount = 0;
+            let lostCount = 0;
+            let totalVolume = 0;
+
+            AppState.allPointsData.forEach(point => {
+                const state = calculatePointState(point, year);
+                if (!state) return;
+
+                if (state.isDead) {
+                    lostCount++;
+                } else {
+                    greenCount++;
+                    totalVolume += state.volume;
+                }
+
+                visiblePoints.push({
+                    ...point,
+                    color: state.color,
+                    altitude: state.altitude,
+                    radius: state.radius,
+                    currentVolume: state.volume,
+                    isDead: state.isDead
+                });
+            });
+
+            document.getElementById('green-points').textContent = greenCount;
+            document.getElementById('lost-points').textContent = lostCount;
+            document.getElementById('total-volume').textContent = totalVolume.toFixed(2);
+
+            return visiblePoints;
+        }
+
+        function updateYear(year) {
+            AppState.currentYear = year;
+            document.getElementById('year-display').textContent = year;
+            document.getElementById('year-slider').value = year;
+            
+            const filteredPoints = filterPointsByYear(year);
+            AppState.globe.pointsData(filteredPoints);
+        }
+
+        function toggleAnimation() {
+            AppState.isPlaying = !AppState.isPlaying;
+            const btn = document.getElementById('play-btn');
+            
+            if (AppState.isPlaying) {
+                btn.textContent = 'Pause';
+                btn.classList.add('playing');
+                startAnimation();
+            } else {
+                btn.textContent = 'Play';
+                btn.classList.remove('playing');
+                stopAnimation();
+            }
+        }
+
+        function startAnimation() {
+            AppState.animationInterval = setInterval(() => {
+                if (AppState.currentYear >= CONFIG.maxYear) {
+                    AppState.currentYear = CONFIG.minYear;
+                } else {
+                    AppState.currentYear++;
+                }
+                updateYear(AppState.currentYear);
+            }, CONFIG.animationSpeed);
+        }
+
+        function stopAnimation() {
+            if (AppState.animationInterval) {
+                clearInterval(AppState.animationInterval);
+                AppState.animationInterval = null;
+            }
+        }
+
+        function resetAnimation() {
+            stopAnimation();
+            AppState.isPlaying = false;
+            document.getElementById('play-btn').textContent = 'Play';
+            document.getElementById('play-btn').classList.remove('playing');
+            updateYear(CONFIG.minYear);
+        }
+
+        function initializeGlobe() {
+            Utils.updateProgress(10);
+            
+            AppState.globe = Globe()(document.getElementById('globeViz'))
+                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+                .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+                .polygonSideColor(() => 'rgba(0, 100, 0, 0.1)')
+                .polygonStrokeColor(() => '#111')
+                .polygonCapCurvatureResolution(CONFIG.polygonResolution)
+                .polygonLabel(({ properties: d }) => `<b>${d.ADMIN || d.name}</b>`)
+                .onPolygonHover(Utils.debounce(hoverD => 
+                    AppState.globe.polygonAltitude(hoverD ? CONFIG.hoverAltitude : GlobeUpdaters.updateAltitude()), 100))
+                .onPolygonClick(({ properties: d }) => selectCountry(d.ADMIN || d.name))
+                .polygonsTransitionDuration(200)
+                .pointColor(d => d.color || '#00ff00')
+                .pointAltitude(d => d.altitude || CONFIG.defaultAltitude)
+                .pointRadius(d => d.radius || 0.5)
+                .pointLabel(d => `
+                    <div style="padding: 10px; max-width: 250px; background: rgba(0,0,0,0.9); border-radius: 5px;">
+                        <b>${d.name || 'Punto'}</b><br>
+                        País: ${d.country || 'N/A'}<br>
+                        Volumen actual: ${d.currentVolume ? d.currentVolume.toFixed(2) : 'N/A'}<br>
+                        Estado: ${d.isDead ? 'Perdido' : 'Activo'}<br>
+                    </div>
+                `)
+                .onPointClick(d => {
+                    if (d.lat && d.lng) {
+                        AppState.globe.pointOfView({ lat: d.lat, lng: d.lng, altitude: 0.3 }, 800);
+                    }
+                })
+                .pointsTransitionDuration(300);
+
+            Utils.updateProgress(20);
+        }
+
+        async function loadCountries() {
+            try {
+                Utils.updateProgress(30);
+                const response = await fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson');
+                AppState.countriesData = await response.json();
+                
+                Utils.updateProgress(50);
+                
+                AppState.globe
+                    .polygonsData(AppState.countriesData.features)
+                    .polygonAltitude(GlobeUpdaters.updateAltitude())
+                    .polygonCapColor(GlobeUpdaters.updateColors());
+                
+                const filteredPoints = filterPointsByYear(AppState.currentYear);
+                AppState.globe.pointsData(filteredPoints);
+                
+                Utils.updateProgress(70);
+                populateCountryList();
+                Utils.updateProgress(100);
+                
+                setTimeout(() => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 500);
+            } catch (error) {
+                console.error('Error al cargar países:', error);
+                Utils.hideLoading('Error al cargar el mapa');
+            }
+        }
+
+        async function loadDataPoints() {
+            try {
+                Utils.updateProgress(40);
+                const response = await fetch('verde2.json');
+                const rawPoints = await response.json();
+                
+                AppState.allPointsData = rawPoints.map(p => ({
+                    ...p,
+                    yearStart: p.yearStart || 2000,
+                    lifespan: p.lifespan || Math.floor(Math.random() * 40 + 30),
+                    baseVolume: p.volume || 1
+                }));
+                
+                updateYear(CONFIG.minYear);
+                console.log('Puntos cargados:', AppState.allPointsData.length);
+            } catch (error) {
+                console.error('Error al cargar puntos:', error);
+            }
+        }
+
+        function populateCountryList() {
+            const countryList = document.getElementById('country-list');
+            const countries = AppState.countriesData.features
+                .map(f => f.properties.ADMIN)
+                .filter(name => name)
+                .sort();
+            
+            countryList.innerHTML = countries
+                .map(country => `<li onclick="selectCountry('${country}')">${country}</li>`)
+                .join('');
+        }
+
+        function selectCountry(countryName) {
+            AppState.selectedCountry = countryName;
+            
+            AppState.globe
+                .polygonAltitude(GlobeUpdaters.updateAltitude())
+                .polygonCapColor(GlobeUpdaters.updateColors());
+            
+            const country = AppState.countriesData.features.find(
+                f => f.properties.ADMIN === countryName
+            );
+            
+            if (country && country.properties) {
+                const props = country.properties;
+                AppState.globe.pointOfView({
+                    lat: props.LAT || 0,
+                    lng: props.LONG || 0,
+                    altitude: 1.5
+                }, 1000);
+            }
+            
+            document.querySelectorAll('#country-list li').forEach(li => {
+                li.classList.toggle('selected', li.textContent === countryName);
+            });
+        }
+
+        document.getElementById('year-slider').addEventListener('input', (e) => {
+            if (AppState.isPlaying) toggleAnimation();
+            updateYear(parseInt(e.target.value));
+        });
+
+        window.addEventListener('load', async () => {
+            initializeGlobe();
+            await loadDataPoints();
+            await loadCountries();
+            AppState.globe.pointOfView({ lat: 0, lng: 0, altitude: 2.5 });
+        });
+    </script>
+</body>
+</html>
