@@ -269,6 +269,35 @@
                 width: calc(100% - 40px);
             }
         }
+        /* Botón flotante para regresar */
+.back-btn {
+    position: fixed;
+    right: 20px;        /* distancia del borde derecho */
+    top: 50%;           /* centro vertical */
+    transform: translateY(-50%);
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff9900, #cc6600);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #cc6600, #994400);
+    transform: translateY(-50%) translateX(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.back-btn:active {
+    transform: translateY(-50%) translateX(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
     </style>
     
     <script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
@@ -313,6 +342,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Botón flotante para regresar a index.html -->
+    <button id="back-button" class="floating-btn back-btn">Sensores</button>
+
 
     <script>
         const CONFIG = {
@@ -613,6 +646,15 @@
             await loadCountries();
             AppState.globe.pointOfView({ lat: 0, lng: 0, altitude: 2.5 });
         });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        const backButton = document.getElementById('back-button');
+        if (backButton) {
+            backButton.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+        }
+    });
     </script>
 </body>
 </html>
