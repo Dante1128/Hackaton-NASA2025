@@ -50,7 +50,8 @@
     <script src="js/weather-service.js"></script>
     <script src="js/globe.js"></script>
     <script src="js/app.js"></script>
-    
+
+    <button id="green-areas-button" class="floating-btn">Áreas Verdes</button>
     <script>
         // Agregar funcionalidad al botón de noticias
         document.addEventListener('DOMContentLoaded', function() {
@@ -61,6 +62,16 @@
                 });
             }
         });
+
+        // Agregar funcionalidad al botón de áreas verdes
+        document.addEventListener('DOMContentLoaded', function() {
+        const greenButton = document.getElementById('green-areas-button');
+        if (greenButton) {
+            greenButton.addEventListener('click', function() {
+                window.location.href = 'index2.html';
+            });
+        }
+    });
     </script>
 </body>
 </html>
