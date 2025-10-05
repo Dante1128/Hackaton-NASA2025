@@ -1,0 +1,7002 @@
+[
+    {
+        "lat": -27.91554,
+        "lng": 135.26095,
+        "name": "Santuario Pacífico",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 52.80141,
+        "lng": 10.83055,
+        "name": "Reserva Amazonas",
+        "country": "Alemania",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 58.30533,
+        "lng": -105.21137,
+        "name": "Reserva EcoVida",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 21.34401,
+        "lng": -102.9977,
+        "name": "Refugio Pacífico",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 38.18326,
+        "lng": -5.73365,
+        "name": "Reserva Selva",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -22.7637,
+        "lng": 135.78022,
+        "name": "Reserva Solar",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 17.6897,
+        "lng": 78.38683,
+        "name": "Santuario EcoVida",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 52.88872,
+        "lng": -1.34575,
+        "name": "Refugio Andino",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 41.96321,
+        "lng": 11.31756,
+        "name": "Reserva Verde",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 40.47205,
+        "lng": 13.83683,
+        "name": "Reserva Esperanza",
+        "country": "Italia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 25.00246,
+        "lng": -100.40473,
+        "name": "Parque EcoVida",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 3.23956,
+        "lng": -72.52364,
+        "name": "Bosque Verde",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 22.82435,
+        "lng": -103.96305,
+        "name": "Reserva EcoVida",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -9.26458,
+        "lng": -53.30384,
+        "name": "Parque Pacífico",
+        "country": "Brasil",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 57.78216,
+        "lng": -106.06236,
+        "name": "Santuario Esperanza",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -35.92248,
+        "lng": -61.78864,
+        "name": "Refugio Verde",
+        "country": "Argentina",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 55.83571,
+        "lng": -5.67555,
+        "name": "Parque EcoVida",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 62.3163,
+        "lng": 106.41204,
+        "name": "Santuario Verde",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 21.00451,
+        "lng": -102.40683,
+        "name": "Parque Selva",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 41.08634,
+        "lng": 15.17196,
+        "name": "Reserva EcoVida",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -30.53853,
+        "lng": -73.22993,
+        "name": "Refugio Esperanza",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -38.76909,
+        "lng": -60.26187,
+        "name": "Parque Solar",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 43.90571,
+        "lng": 4.16332,
+        "name": "Reserva Pacífico",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 56.96525,
+        "lng": -105.66807,
+        "name": "Santuario Solar",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 7.26455,
+        "lng": -74.95956,
+        "name": "Bosque Amazonas",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.70352,
+        "lng": -73.50321,
+        "name": "Refugio EcoVida",
+        "country": "Perú",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 54.35784,
+        "lng": -4.31808,
+        "name": "Santuario Selva",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -26.36323,
+        "lng": 134.38226,
+        "name": "Reserva Esperanza",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 56.11838,
+        "lng": -104.17962,
+        "name": "Bosque Pacífico",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 47.46998,
+        "lng": 2.36275,
+        "name": "Refugio Pacífico",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 2.53243,
+        "lng": -74.18439,
+        "name": "Parque EcoVida",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -14.55841,
+        "lng": -63.18096,
+        "name": "Parque Solar",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -30.85659,
+        "lng": -70.76561,
+        "name": "Reserva EcoVida",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 35.30766,
+        "lng": 137.19294,
+        "name": "Parque Selva",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 48.48697,
+        "lng": 0.7811,
+        "name": "Refugio EcoVida",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 19.51861,
+        "lng": 76.88631,
+        "name": "Reserva Selva",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 47.84043,
+        "lng": 4.61952,
+        "name": "Santuario Esperanza",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -14.25155,
+        "lng": -67.74419,
+        "name": "Refugio Esperanza",
+        "country": "Bolivia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -33.56154,
+        "lng": 22.97112,
+        "name": "Santuario Pacífico",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 60.76225,
+        "lng": 107.61919,
+        "name": "Santuario Selva",
+        "country": "Rusia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 19.94217,
+        "lng": 76.82495,
+        "name": "Bosque Solar",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -32.03618,
+        "lng": -73.84936,
+        "name": "Santuario EcoVida",
+        "country": "Chile",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -31.603,
+        "lng": 23.10345,
+        "name": "Refugio Pacífico",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -7.44168,
+        "lng": -52.34064,
+        "name": "Bosque Solar",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 20.67491,
+        "lng": -100.84791,
+        "name": "Refugio Verde",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 51.80231,
+        "lng": 7.82284,
+        "name": "Refugio Amazonas",
+        "country": "Alemania",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 22.02699,
+        "lng": 79.11177,
+        "name": "Reserva Selva",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.88199,
+        "lng": 104.8244,
+        "name": "Santuario Verde",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 44.77629,
+        "lng": 11.7315,
+        "name": "Refugio Esperanza",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 24.41472,
+        "lng": -101.44912,
+        "name": "Refugio Verde",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 52.70317,
+        "lng": -4.30789,
+        "name": "Refugio Esperanza",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 40.63045,
+        "lng": 11.21122,
+        "name": "Santuario Selva",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -11.61303,
+        "lng": -75.06838,
+        "name": "Santuario EcoVida",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -9.199,
+        "lng": -77.28902,
+        "name": "Refugio Verde",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 2.03809,
+        "lng": -76.34734,
+        "name": "Santuario Verde",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 19.42643,
+        "lng": 81.69942,
+        "name": "Refugio Selva",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -7.73786,
+        "lng": -72.31698,
+        "name": "Parque Selva",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -37.84731,
+        "lng": -62.16023,
+        "name": "Bosque EcoVida",
+        "country": "Argentina",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 5.14,
+        "lng": -71.89509,
+        "name": "Reserva Selva",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -15.5181,
+        "lng": -65.40456,
+        "name": "Reserva Solar",
+        "country": "Bolivia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 23.69292,
+        "lng": -103.62071,
+        "name": "Bosque Pacífico",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 58.62651,
+        "lng": -104.46352,
+        "name": "Reserva Esperanza",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 35.37138,
+        "lng": 139.45806,
+        "name": "Reserva EcoVida",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 54.11567,
+        "lng": -107.61975,
+        "name": "Santuario Solar",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -9.37427,
+        "lng": -74.07192,
+        "name": "Bosque Verde",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 22.23756,
+        "lng": -101.72301,
+        "name": "Santuario Verde",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 35.53533,
+        "lng": -97.6827,
+        "name": "Bosque Amazonas",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 57.91962,
+        "lng": -108.89093,
+        "name": "Santuario Selva",
+        "country": "Canadá",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 44.55916,
+        "lng": 9.5202,
+        "name": "Reserva Selva",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 41.2161,
+        "lng": -1.94341,
+        "name": "Bosque EcoVida",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -34.35823,
+        "lng": -72.16182,
+        "name": "Bosque Andino",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 44.26691,
+        "lng": 13.30791,
+        "name": "Parque Andino",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 54.02157,
+        "lng": 11.0987,
+        "name": "Reserva Selva",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 51.93924,
+        "lng": 8.57471,
+        "name": "Bosque Solar",
+        "country": "Alemania",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 41.92919,
+        "lng": 14.47168,
+        "name": "Bosque Andino",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 35.41322,
+        "lng": 104.61324,
+        "name": "Parque Andino",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 43.2427,
+        "lng": 4.18868,
+        "name": "Reserva Amazonas",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -31.97344,
+        "lng": 22.45838,
+        "name": "Parque Pacífico",
+        "country": "Sudáfrica",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -17.80318,
+        "lng": -63.66689,
+        "name": "Parque Verde",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 25.8562,
+        "lng": -102.61115,
+        "name": "Parque Selva",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -38.50392,
+        "lng": -64.79563,
+        "name": "Santuario Solar",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 44.55731,
+        "lng": 3.34746,
+        "name": "Bosque Esperanza",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -28.08643,
+        "lng": 22.76386,
+        "name": "Santuario Selva",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 58.37398,
+        "lng": -105.96891,
+        "name": "Santuario Amazonas",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 5.74894,
+        "lng": -76.04228,
+        "name": "Parque Selva",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -17.58527,
+        "lng": -64.15601,
+        "name": "Reserva Esperanza",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 23.11521,
+        "lng": -101.60836,
+        "name": "Bosque Verde",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.53258,
+        "lng": 11.55921,
+        "name": "Bosque Verde",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.08794,
+        "lng": -105.70194,
+        "name": "Santuario Pacífico",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 46.314,
+        "lng": 0.45544,
+        "name": "Bosque Pacífico",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 2.02313,
+        "lng": -71.60539,
+        "name": "Bosque Selva",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 43.5678,
+        "lng": 13.15628,
+        "name": "Reserva Andino",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 38.05628,
+        "lng": 136.85518,
+        "name": "Refugio Solar",
+        "country": "Japón",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -18.19188,
+        "lng": -63.39727,
+        "name": "Bosque Andino",
+        "country": "Bolivia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 36.7747,
+        "lng": 136.55051,
+        "name": "Bosque Selva",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.67684,
+        "lng": -93.29958,
+        "name": "Refugio Selva",
+        "country": "Estados Unidos",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 54.30045,
+        "lng": -108.99898,
+        "name": "Reserva Amazonas",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 22.93148,
+        "lng": -101.47264,
+        "name": "Parque Solar",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 23.54253,
+        "lng": -101.46167,
+        "name": "Bosque Andino",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 18.94456,
+        "lng": 78.29015,
+        "name": "Reserva Verde",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 54.29025,
+        "lng": -3.28627,
+        "name": "Refugio Amazonas",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -7.70315,
+        "lng": -72.78797,
+        "name": "Refugio Esperanza",
+        "country": "Perú",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 63.96729,
+        "lng": 105.80336,
+        "name": "Santuario Amazonas",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 57.29248,
+        "lng": -108.95175,
+        "name": "Refugio Selva",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 61.72341,
+        "lng": 105.41056,
+        "name": "Santuario Andino",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -7.8654,
+        "lng": -53.94377,
+        "name": "Refugio Solar",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 46.68778,
+        "lng": -0.42171,
+        "name": "Reserva Pacífico",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -30.63049,
+        "lng": -73.83812,
+        "name": "Refugio Selva",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 53.62138,
+        "lng": -3.66126,
+        "name": "Refugio Esperanza",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 2.1172,
+        "lng": -76.07285,
+        "name": "Santuario Solar",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -7.61979,
+        "lng": -76.49778,
+        "name": "Santuario Andino",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 47.65014,
+        "lng": -0.71657,
+        "name": "Bosque Pacífico",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -33.84742,
+        "lng": -74.21454,
+        "name": "Refugio Solar",
+        "country": "Chile",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 21.89797,
+        "lng": 75.97523,
+        "name": "Bosque Pacífico",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 43.43918,
+        "lng": 1.49397,
+        "name": "Refugio Amazonas",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 34.32621,
+        "lng": 140.98197,
+        "name": "Reserva Esperanza",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 25.7806,
+        "lng": -104.82659,
+        "name": "Refugio Amazonas",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.3252,
+        "lng": 77.25354,
+        "name": "Refugio Selva",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -8.82226,
+        "lng": -77.08986,
+        "name": "Bosque Verde",
+        "country": "Perú",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 40.8794,
+        "lng": 13.94957,
+        "name": "Bosque Esperanza",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 38.22915,
+        "lng": -92.91793,
+        "name": "Refugio Pacífico",
+        "country": "Estados Unidos",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 41.12017,
+        "lng": 11.11962,
+        "name": "Reserva Amazonas",
+        "country": "Italia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 55.19397,
+        "lng": -5.51809,
+        "name": "Reserva Verde",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 53.30479,
+        "lng": 7.90404,
+        "name": "Reserva Verde",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -28.9562,
+        "lng": 21.6426,
+        "name": "Refugio Esperanza",
+        "country": "Sudáfrica",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 6.95761,
+        "lng": -72.05379,
+        "name": "Refugio Esperanza",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 58.51805,
+        "lng": 105.32473,
+        "name": "Refugio Esperanza",
+        "country": "Rusia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 25.61605,
+        "lng": -103.71853,
+        "name": "Santuario Verde",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 5.5389,
+        "lng": -75.74947,
+        "name": "Parque Solar",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -11.94668,
+        "lng": -56.27973,
+        "name": "Parque Esperanza",
+        "country": "Brasil",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -24.11015,
+        "lng": 133.22518,
+        "name": "Reserva Verde",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 51.44655,
+        "lng": 12.2039,
+        "name": "Parque EcoVida",
+        "country": "Alemania",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 23.39251,
+        "lng": 78.23741,
+        "name": "Parque EcoVida",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 33.67437,
+        "lng": 135.95365,
+        "name": "Parque Esperanza",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 56.95261,
+        "lng": -106.71868,
+        "name": "Bosque Solar",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -14.02587,
+        "lng": -66.10547,
+        "name": "Reserva Andino",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 33.20303,
+        "lng": 139.86778,
+        "name": "Parque Pacífico",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 24.61781,
+        "lng": -101.16801,
+        "name": "Bosque Amazonas",
+        "country": "México",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 17.65871,
+        "lng": 80.86011,
+        "name": "Reserva Solar",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.31715,
+        "lng": -3.12434,
+        "name": "Refugio Esperanza",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -11.55975,
+        "lng": -74.17929,
+        "name": "Santuario Selva",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 59.60282,
+        "lng": 103.51907,
+        "name": "Parque Solar",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.25581,
+        "lng": 101.81437,
+        "name": "Parque Amazonas",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -12.85491,
+        "lng": -55.22776,
+        "name": "Parque Solar",
+        "country": "Brasil",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 40.37487,
+        "lng": 10.14271,
+        "name": "Reserva Andino",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -10.4656,
+        "lng": -76.01351,
+        "name": "Bosque Selva",
+        "country": "Perú",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 20.59916,
+        "lng": -102.05338,
+        "name": "Reserva Andino",
+        "country": "México",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -14.1593,
+        "lng": -62.70087,
+        "name": "Refugio Verde",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.75874,
+        "lng": 139.688,
+        "name": "Santuario Esperanza",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 20.03026,
+        "lng": 81.68705,
+        "name": "Bosque Verde",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 34.1117,
+        "lng": 102.95323,
+        "name": "Refugio Pacífico",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -10.82267,
+        "lng": -73.0248,
+        "name": "Bosque Andino",
+        "country": "Perú",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.48304,
+        "lng": -4.46074,
+        "name": "Santuario EcoVida",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 46.49875,
+        "lng": -0.29385,
+        "name": "Parque Solar",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -7.573,
+        "lng": -57.3543,
+        "name": "Reserva Selva",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -14.0366,
+        "lng": -64.13147,
+        "name": "Refugio Solar",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -33.34733,
+        "lng": 22.01859,
+        "name": "Parque Selva",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 20.59466,
+        "lng": 79.77569,
+        "name": "Refugio Pacífico",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -24.50199,
+        "lng": 135.30304,
+        "name": "Parque Solar",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 51.15369,
+        "lng": 9.69828,
+        "name": "Refugio Solar",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -37.48966,
+        "lng": -62.77794,
+        "name": "Santuario Pacífico",
+        "country": "Argentina",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -30.34972,
+        "lng": 22.87344,
+        "name": "Bosque Selva",
+        "country": "Sudáfrica",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 42.17698,
+        "lng": 14.03813,
+        "name": "Bosque Verde",
+        "country": "Italia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -24.35128,
+        "lng": 134.96452,
+        "name": "Reserva Pacífico",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 40.21452,
+        "lng": -4.5511,
+        "name": "Reserva Pacífico",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 35.17529,
+        "lng": 103.43015,
+        "name": "Parque Esperanza",
+        "country": "China",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 7.14017,
+        "lng": -75.72107,
+        "name": "Bosque Amazonas",
+        "country": "Colombia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -26.04602,
+        "lng": 133.82809,
+        "name": "Parque Esperanza",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 21.94038,
+        "lng": -101.53865,
+        "name": "Parque Esperanza",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -38.19466,
+        "lng": -63.85327,
+        "name": "Refugio Pacífico",
+        "country": "Argentina",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 57.32904,
+        "lng": -106.23467,
+        "name": "Santuario EcoVida",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -31.88145,
+        "lng": -70.66763,
+        "name": "Refugio Amazonas",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -12.588,
+        "lng": -53.49948,
+        "name": "Parque Verde",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 36.38092,
+        "lng": 139.92244,
+        "name": "Reserva Verde",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -31.18881,
+        "lng": -73.7499,
+        "name": "Refugio Esperanza",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.76302,
+        "lng": 1.92877,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -12.64736,
+        "lng": -53.15649,
+        "name": "Parque Esperanza",
+        "country": "Brasil",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.73625,
+        "lng": 139.88653,
+        "name": "Reserva Selva",
+        "country": "Japón",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -26.79582,
+        "lng": 134.91206,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 37.05705,
+        "lng": 105.55431,
+        "name": "Parque Pacífico",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 23.21799,
+        "lng": 79.02224,
+        "name": "Bosque Amazonas",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 43.4282,
+        "lng": 11.85366,
+        "name": "Reserva Andino",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 50.39337,
+        "lng": 9.00912,
+        "name": "Santuario Amazonas",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -29.25764,
+        "lng": 25.62089,
+        "name": "Bosque Esperanza",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.9303,
+        "lng": 11.38306,
+        "name": "Bosque EcoVida",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 56.12966,
+        "lng": -107.17643,
+        "name": "Reserva Andino",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 53.7086,
+        "lng": 11.01408,
+        "name": "Parque Selva",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 56.12686,
+        "lng": -6.05604,
+        "name": "Bosque Verde",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 53.19353,
+        "lng": -108.77399,
+        "name": "Bosque Solar",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.58131,
+        "lng": 135.35909,
+        "name": "Parque Solar",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 58.05536,
+        "lng": -3.55084,
+        "name": "Refugio Solar",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 47.34225,
+        "lng": 1.83381,
+        "name": "Santuario Andino",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -9.10526,
+        "lng": -55.99056,
+        "name": "Bosque Selva",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 35.15217,
+        "lng": -97.29543,
+        "name": "Santuario Solar",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -33.28404,
+        "lng": -70.4287,
+        "name": "Santuario Pacífico",
+        "country": "Chile",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 58.77265,
+        "lng": -107.79638,
+        "name": "Santuario Verde",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 54.26018,
+        "lng": -107.19148,
+        "name": "Santuario Verde",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 3.26479,
+        "lng": -74.55502,
+        "name": "Refugio Pacífico",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 56.14493,
+        "lng": -5.32457,
+        "name": "Refugio EcoVida",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 35.69162,
+        "lng": 138.26461,
+        "name": "Bosque Amazonas",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 22.60145,
+        "lng": 77.91961,
+        "name": "Santuario Solar",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 44.87023,
+        "lng": 1.2576,
+        "name": "Refugio EcoVida",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 43.83951,
+        "lng": 13.65707,
+        "name": "Parque Pacífico",
+        "country": "Italia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -23.12225,
+        "lng": 132.93975,
+        "name": "Refugio Selva",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -25.3024,
+        "lng": 136.46553,
+        "name": "Reserva Verde",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -15.23787,
+        "lng": -64.8223,
+        "name": "Refugio Amazonas",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -22.36871,
+        "lng": 134.32446,
+        "name": "Bosque Verde",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -8.01146,
+        "lng": -56.90999,
+        "name": "Parque Andino",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -27.77425,
+        "lng": 134.47966,
+        "name": "Bosque Pacífico",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.50345,
+        "lng": 102.91722,
+        "name": "Parque Solar",
+        "country": "China",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -17.48769,
+        "lng": -65.13829,
+        "name": "Refugio Amazonas",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 50.16789,
+        "lng": 13.01637,
+        "name": "Bosque Andino",
+        "country": "Alemania",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 32.72897,
+        "lng": 103.69426,
+        "name": "Parque Selva",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.02812,
+        "lng": -94.00796,
+        "name": "Parque Amazonas",
+        "country": "Estados Unidos",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -30.28355,
+        "lng": 21.55742,
+        "name": "Bosque Verde",
+        "country": "Sudáfrica",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -16.75598,
+        "lng": -64.6519,
+        "name": "Reserva Andino",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -27.48359,
+        "lng": 131.14883,
+        "name": "Parque Verde",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 46.8176,
+        "lng": 3.62223,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.0663,
+        "lng": 102.81596,
+        "name": "Bosque Andino",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 34.41656,
+        "lng": 138.5273,
+        "name": "Parque Pacífico",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 18.70525,
+        "lng": 79.05779,
+        "name": "Bosque Esperanza",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -37.97982,
+        "lng": -61.0244,
+        "name": "Refugio Amazonas",
+        "country": "Argentina",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 35.25764,
+        "lng": -97.35758,
+        "name": "Reserva Verde",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 44.26679,
+        "lng": 0.13258,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 61.79505,
+        "lng": 105.84069,
+        "name": "Bosque Andino",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 35.43606,
+        "lng": 136.10913,
+        "name": "Reserva Solar",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 21.93519,
+        "lng": -100.576,
+        "name": "Parque Amazonas",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -19.27911,
+        "lng": -62.10465,
+        "name": "Santuario Pacífico",
+        "country": "Bolivia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 49.76995,
+        "lng": 8.49607,
+        "name": "Reserva Solar",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 23.53861,
+        "lng": -99.7087,
+        "name": "Reserva EcoVida",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -24.19664,
+        "lng": 132.83844,
+        "name": "Parque Andino",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -23.7348,
+        "lng": 132.07268,
+        "name": "Santuario Pacífico",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -11.42134,
+        "lng": -77.91076,
+        "name": "Refugio Esperanza",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 38.83922,
+        "lng": -3.5319,
+        "name": "Santuario Verde",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 54.15091,
+        "lng": -107.16303,
+        "name": "Refugio Selva",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 40.07156,
+        "lng": 15.46166,
+        "name": "Parque Selva",
+        "country": "Italia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 20.26884,
+        "lng": 77.4415,
+        "name": "Refugio EcoVida",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 34.62313,
+        "lng": 137.60285,
+        "name": "Bosque Pacífico",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 18.03519,
+        "lng": 78.73546,
+        "name": "Santuario Pacífico",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -9.4887,
+        "lng": -55.32983,
+        "name": "Bosque Andino",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.99011,
+        "lng": 78.9801,
+        "name": "Bosque Selva",
+        "country": "India",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 35.83577,
+        "lng": 103.50806,
+        "name": "Parque EcoVida",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.09932,
+        "lng": -3.26184,
+        "name": "Bosque Amazonas",
+        "country": "España",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 43.355,
+        "lng": -0.54283,
+        "name": "Refugio Amazonas",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 2.4691,
+        "lng": -76.75764,
+        "name": "Bosque EcoVida",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -27.36733,
+        "lng": 135.22839,
+        "name": "Refugio EcoVida",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 44.23694,
+        "lng": 2.64851,
+        "name": "Parque Solar",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 42.09471,
+        "lng": 15.27338,
+        "name": "Bosque Selva",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 33.85518,
+        "lng": 103.214,
+        "name": "Santuario EcoVida",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.18543,
+        "lng": 135.64321,
+        "name": "Santuario EcoVida",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 22.15687,
+        "lng": -103.85247,
+        "name": "Reserva Andino",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -28.63995,
+        "lng": 24.42161,
+        "name": "Parque Esperanza",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 63.25827,
+        "lng": 104.64737,
+        "name": "Refugio Verde",
+        "country": "Rusia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -35.31923,
+        "lng": -68.99979,
+        "name": "Refugio Andino",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 40.56958,
+        "lng": -0.87042,
+        "name": "Refugio Amazonas",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.20633,
+        "lng": -95.74513,
+        "name": "Parque EcoVida",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 53.6979,
+        "lng": 9.85765,
+        "name": "Santuario Selva",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -12.04317,
+        "lng": -53.27176,
+        "name": "Parque Selva",
+        "country": "Brasil",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 40.71027,
+        "lng": -3.74834,
+        "name": "Santuario EcoVida",
+        "country": "España",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 57.74198,
+        "lng": -5.84548,
+        "name": "Refugio Andino",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 20.70077,
+        "lng": 76.17059,
+        "name": "Refugio EcoVida",
+        "country": "India",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 54.46229,
+        "lng": -106.97668,
+        "name": "Bosque Amazonas",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 38.12676,
+        "lng": -2.38112,
+        "name": "Bosque EcoVida",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 18.67023,
+        "lng": 80.44669,
+        "name": "Bosque Solar",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 21.94097,
+        "lng": 80.82597,
+        "name": "Bosque Andino",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 21.51114,
+        "lng": 76.81849,
+        "name": "Reserva Andino",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 37.20987,
+        "lng": 102.10633,
+        "name": "Reserva Amazonas",
+        "country": "China",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 36.09245,
+        "lng": -93.39112,
+        "name": "Reserva Solar",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 37.43074,
+        "lng": 138.65343,
+        "name": "Santuario Solar",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -12.48175,
+        "lng": -52.34223,
+        "name": "Reserva Pacífico",
+        "country": "Brasil",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 58.01794,
+        "lng": -108.6853,
+        "name": "Parque Andino",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 52.96148,
+        "lng": -3.05573,
+        "name": "Bosque Andino",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -34.16797,
+        "lng": -71.23974,
+        "name": "Refugio Esperanza",
+        "country": "Chile",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.86546,
+        "lng": 9.36116,
+        "name": "Santuario EcoVida",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 21.29418,
+        "lng": 78.87088,
+        "name": "Reserva EcoVida",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -26.11903,
+        "lng": 132.85391,
+        "name": "Reserva Pacífico",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 25.75891,
+        "lng": -99.16635,
+        "name": "Refugio Andino",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 5.47718,
+        "lng": -76.77548,
+        "name": "Bosque Amazonas",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 38.17992,
+        "lng": -93.40353,
+        "name": "Reserva Pacífico",
+        "country": "Estados Unidos",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -34.72461,
+        "lng": -69.36171,
+        "name": "Santuario Solar",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -33.91303,
+        "lng": -69.19781,
+        "name": "Bosque Pacífico",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -8.29111,
+        "lng": -73.90455,
+        "name": "Santuario Esperanza",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -6.48765,
+        "lng": -75.24489,
+        "name": "Santuario Verde",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -11.49234,
+        "lng": -77.45663,
+        "name": "Bosque Solar",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -9.55983,
+        "lng": -74.45971,
+        "name": "Parque Amazonas",
+        "country": "Perú",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -29.55477,
+        "lng": 24.80732,
+        "name": "Santuario Andino",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 54.9166,
+        "lng": -2.79712,
+        "name": "Parque Verde",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 38.37482,
+        "lng": -92.33693,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -38.94078,
+        "lng": -64.92865,
+        "name": "Parque Verde",
+        "country": "Argentina",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 42.26076,
+        "lng": -4.61644,
+        "name": "Reserva Amazonas",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 48.94547,
+        "lng": -0.53417,
+        "name": "Santuario Amazonas",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 6.75003,
+        "lng": -71.50555,
+        "name": "Parque Amazonas",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 24.17679,
+        "lng": -101.61909,
+        "name": "Reserva Andino",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 43.87894,
+        "lng": 10.02173,
+        "name": "Parque Andino",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 34.32737,
+        "lng": 101.48579,
+        "name": "Bosque Verde",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -32.28145,
+        "lng": 19.96747,
+        "name": "Bosque EcoVida",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -28.21691,
+        "lng": 132.2309,
+        "name": "Refugio Verde",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -38.7252,
+        "lng": -65.0517,
+        "name": "Santuario Selva",
+        "country": "Argentina",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -33.00539,
+        "lng": -72.40033,
+        "name": "Santuario Selva",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -10.17884,
+        "lng": -76.83498,
+        "name": "Santuario Amazonas",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 62.95564,
+        "lng": 108.11676,
+        "name": "Refugio Esperanza",
+        "country": "Rusia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 54.04392,
+        "lng": 10.40996,
+        "name": "Refugio Verde",
+        "country": "Alemania",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 58.627,
+        "lng": 102.77848,
+        "name": "Santuario Andino",
+        "country": "Rusia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 23.22517,
+        "lng": 80.3612,
+        "name": "Bosque Verde",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -33.77015,
+        "lng": -70.92443,
+        "name": "Santuario Verde",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 44.82367,
+        "lng": 9.54421,
+        "name": "Bosque Andino",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 34.14707,
+        "lng": 140.91953,
+        "name": "Parque Pacífico",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -23.80744,
+        "lng": 134.29099,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -9.66544,
+        "lng": -54.72482,
+        "name": "Refugio Solar",
+        "country": "Brasil",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 41.87291,
+        "lng": -4.38944,
+        "name": "Parque Verde",
+        "country": "España",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.08399,
+        "lng": -1.08389,
+        "name": "Santuario Verde",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 58.76762,
+        "lng": 102.36242,
+        "name": "Reserva Verde",
+        "country": "Rusia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 1.53021,
+        "lng": -72.92182,
+        "name": "Bosque EcoVida",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -24.67554,
+        "lng": 136.3886,
+        "name": "Reserva Esperanza",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 2.40742,
+        "lng": -75.24415,
+        "name": "Parque Solar",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 20.40152,
+        "lng": 76.5934,
+        "name": "Refugio EcoVida",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 36.25069,
+        "lng": -92.81385,
+        "name": "Reserva Verde",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.32872,
+        "lng": 103.6902,
+        "name": "Refugio Pacífico",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 33.38203,
+        "lng": 104.76267,
+        "name": "Bosque Selva",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -6.79126,
+        "lng": -77.73543,
+        "name": "Parque Solar",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 34.3599,
+        "lng": 138.37522,
+        "name": "Refugio Solar",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 41.43476,
+        "lng": -0.95449,
+        "name": "Parque Amazonas",
+        "country": "España",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 42.56131,
+        "lng": 13.60157,
+        "name": "Santuario Andino",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 37.54845,
+        "lng": 102.97348,
+        "name": "Santuario Verde",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 19.99951,
+        "lng": 78.07853,
+        "name": "Reserva Esperanza",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 42.30191,
+        "lng": 15.19226,
+        "name": "Bosque Selva",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 63.95891,
+        "lng": 102.86269,
+        "name": "Parque Verde",
+        "country": "Rusia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -39.98804,
+        "lng": -63.77919,
+        "name": "Bosque Amazonas",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -27.65463,
+        "lng": 25.40636,
+        "name": "Santuario Solar",
+        "country": "Sudáfrica",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 55.48586,
+        "lng": -108.49302,
+        "name": "Bosque Esperanza",
+        "country": "Canadá",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 34.44958,
+        "lng": 135.5223,
+        "name": "Reserva Solar",
+        "country": "Japón",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 21.47999,
+        "lng": 77.65577,
+        "name": "Bosque EcoVida",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 21.67075,
+        "lng": 80.70495,
+        "name": "Parque Solar",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 47.40173,
+        "lng": 2.69519,
+        "name": "Parque Amazonas",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 17.75768,
+        "lng": 77.46887,
+        "name": "Refugio Pacífico",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -8.5408,
+        "lng": -57.16488,
+        "name": "Parque Solar",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -8.64632,
+        "lng": -73.73306,
+        "name": "Reserva Esperanza",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 41.48119,
+        "lng": -4.96205,
+        "name": "Santuario Amazonas",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -37.6562,
+        "lng": -61.58913,
+        "name": "Bosque EcoVida",
+        "country": "Argentina",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -10.50285,
+        "lng": -52.49255,
+        "name": "Refugio EcoVida",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 44.41252,
+        "lng": 0.50855,
+        "name": "Parque Esperanza",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 2.83353,
+        "lng": -74.65995,
+        "name": "Bosque Andino",
+        "country": "Colombia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 37.53306,
+        "lng": 102.67405,
+        "name": "Parque Selva",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 24.30506,
+        "lng": -104.39726,
+        "name": "Refugio Selva",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 35.68101,
+        "lng": 102.66138,
+        "name": "Bosque Selva",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -7.78142,
+        "lng": -74.68154,
+        "name": "Parque Selva",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -27.82174,
+        "lng": 136.69075,
+        "name": "Bosque Pacífico",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -19.35108,
+        "lng": -66.39524,
+        "name": "Bosque Andino",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 42.96088,
+        "lng": 12.00067,
+        "name": "Parque Solar",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 58.50419,
+        "lng": -107.89824,
+        "name": "Refugio Amazonas",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -25.82577,
+        "lng": 135.13167,
+        "name": "Refugio Pacífico",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -40.90608,
+        "lng": -62.40902,
+        "name": "Reserva Selva",
+        "country": "Argentina",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 2.07563,
+        "lng": -74.29308,
+        "name": "Bosque Amazonas",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 44.23956,
+        "lng": 4.23092,
+        "name": "Santuario EcoVida",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 58.13524,
+        "lng": -107.33447,
+        "name": "Santuario EcoVida",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -11.95788,
+        "lng": -72.52254,
+        "name": "Santuario Pacífico",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -38.5807,
+        "lng": -62.95236,
+        "name": "Reserva Verde",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -22.9467,
+        "lng": 132.39351,
+        "name": "Reserva Selva",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 40.89596,
+        "lng": 11.57893,
+        "name": "Parque Amazonas",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -12.95022,
+        "lng": -57.79571,
+        "name": "Bosque Andino",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 41.10944,
+        "lng": 10.27562,
+        "name": "Parque Selva",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 53.367,
+        "lng": -105.76616,
+        "name": "Santuario Esperanza",
+        "country": "Canadá",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 64.1385,
+        "lng": 108.10233,
+        "name": "Bosque Andino",
+        "country": "Rusia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -30.42131,
+        "lng": 24.35881,
+        "name": "Bosque Andino",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 57.63042,
+        "lng": -108.73257,
+        "name": "Reserva Selva",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 19.71591,
+        "lng": 79.87083,
+        "name": "Refugio Amazonas",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -25.84481,
+        "lng": 132.83996,
+        "name": "Reserva Pacífico",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 24.55817,
+        "lng": -99.98594,
+        "name": "Bosque Pacífico",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.96432,
+        "lng": 11.13321,
+        "name": "Santuario Pacífico",
+        "country": "Italia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 20.3081,
+        "lng": -100.58883,
+        "name": "Refugio Solar",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 40.56351,
+        "lng": -5.72108,
+        "name": "Santuario Verde",
+        "country": "España",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.10414,
+        "lng": 140.66965,
+        "name": "Santuario Pacífico",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 44.32511,
+        "lng": 1.06411,
+        "name": "Refugio Pacífico",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 5.33711,
+        "lng": -73.90953,
+        "name": "Parque Verde",
+        "country": "Colombia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -35.16024,
+        "lng": -68.66724,
+        "name": "Refugio Selva",
+        "country": "Chile",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.11496,
+        "lng": -2.77602,
+        "name": "Santuario Selva",
+        "country": "España",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -7.15789,
+        "lng": -76.24226,
+        "name": "Parque Esperanza",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 45.66235,
+        "lng": 4.31553,
+        "name": "Santuario EcoVida",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.6391,
+        "lng": 11.98607,
+        "name": "Bosque Selva",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.5497,
+        "lng": -1.13264,
+        "name": "Reserva Andino",
+        "country": "Reino Unido",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -33.07971,
+        "lng": -69.13989,
+        "name": "Reserva Amazonas",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 2.58595,
+        "lng": -75.85554,
+        "name": "Bosque Verde",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -26.72281,
+        "lng": 134.07879,
+        "name": "Santuario Esperanza",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 36.21405,
+        "lng": 140.27502,
+        "name": "Refugio Verde",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 37.13009,
+        "lng": -5.40776,
+        "name": "Reserva Solar",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -9.80645,
+        "lng": -52.24689,
+        "name": "Reserva Andino",
+        "country": "Brasil",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 23.87185,
+        "lng": -101.6653,
+        "name": "Santuario Solar",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -26.64967,
+        "lng": 133.63552,
+        "name": "Reserva Solar",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -39.30316,
+        "lng": -60.13705,
+        "name": "Parque Verde",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -32.58101,
+        "lng": -74.0343,
+        "name": "Reserva Selva",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 59.50293,
+        "lng": 106.92824,
+        "name": "Parque EcoVida",
+        "country": "Rusia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -24.35633,
+        "lng": 135.78757,
+        "name": "Santuario Amazonas",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 43.24618,
+        "lng": 2.37293,
+        "name": "Refugio EcoVida",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 40.04473,
+        "lng": 12.80868,
+        "name": "Bosque Amazonas",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -22.46646,
+        "lng": 134.89967,
+        "name": "Reserva Esperanza",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 54.58174,
+        "lng": -3.60833,
+        "name": "Santuario Pacífico",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 24.89068,
+        "lng": -103.71458,
+        "name": "Santuario Selva",
+        "country": "México",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 38.24557,
+        "lng": 135.66837,
+        "name": "Refugio Pacífico",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.43245,
+        "lng": 80.65544,
+        "name": "Parque Solar",
+        "country": "India",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.57489,
+        "lng": 135.62347,
+        "name": "Refugio Selva",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -9.78057,
+        "lng": -73.67773,
+        "name": "Parque Selva",
+        "country": "Perú",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 56.73859,
+        "lng": -5.66766,
+        "name": "Bosque Andino",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -35.52434,
+        "lng": -70.14888,
+        "name": "Santuario Verde",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.97501,
+        "lng": -97.21991,
+        "name": "Refugio Esperanza",
+        "country": "Estados Unidos",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 19.91698,
+        "lng": 77.51534,
+        "name": "Santuario Verde",
+        "country": "India",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 24.93163,
+        "lng": -101.69657,
+        "name": "Reserva Verde",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 48.35795,
+        "lng": 3.06869,
+        "name": "Parque Andino",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 44.7691,
+        "lng": 13.59265,
+        "name": "Refugio Selva",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 55.86231,
+        "lng": -2.17909,
+        "name": "Santuario Solar",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 25.55935,
+        "lng": -103.8327,
+        "name": "Parque Selva",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -31.7479,
+        "lng": -69.75303,
+        "name": "Refugio Selva",
+        "country": "Chile",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -8.58746,
+        "lng": -52.83829,
+        "name": "Bosque Solar",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.65493,
+        "lng": 104.72483,
+        "name": "Bosque EcoVida",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -33.59828,
+        "lng": 23.87492,
+        "name": "Bosque Selva",
+        "country": "Sudáfrica",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -10.75419,
+        "lng": -52.53727,
+        "name": "Bosque Pacífico",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 61.54945,
+        "lng": 108.18027,
+        "name": "Refugio Solar",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 46.23565,
+        "lng": 4.77261,
+        "name": "Parque EcoVida",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 58.63848,
+        "lng": 107.5545,
+        "name": "Refugio Esperanza",
+        "country": "Rusia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 34.38353,
+        "lng": 136.09384,
+        "name": "Bosque Amazonas",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 6.01866,
+        "lng": -73.66429,
+        "name": "Refugio Amazonas",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 25.72487,
+        "lng": -103.41625,
+        "name": "Reserva Selva",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 20.7473,
+        "lng": -100.1513,
+        "name": "Reserva Solar",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 33.32809,
+        "lng": 105.66669,
+        "name": "Refugio Esperanza",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 44.36257,
+        "lng": 3.67808,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -8.35754,
+        "lng": -54.26673,
+        "name": "Bosque Pacífico",
+        "country": "Brasil",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 38.46453,
+        "lng": 139.84005,
+        "name": "Refugio Selva",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 42.46528,
+        "lng": -6.63883,
+        "name": "Santuario Verde",
+        "country": "España",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 18.70647,
+        "lng": 79.35403,
+        "name": "Refugio Andino",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 38.44823,
+        "lng": -4.2188,
+        "name": "Refugio Andino",
+        "country": "España",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 32.78945,
+        "lng": 100.35681,
+        "name": "Reserva Andino",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 42.62278,
+        "lng": 13.22133,
+        "name": "Santuario EcoVida",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -9.14741,
+        "lng": -53.92058,
+        "name": "Bosque Pacífico",
+        "country": "Brasil",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -16.2171,
+        "lng": -62.5594,
+        "name": "Parque Verde",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 43.20277,
+        "lng": 2.52661,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 20.81566,
+        "lng": -104.18324,
+        "name": "Bosque EcoVida",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -11.58863,
+        "lng": -73.45985,
+        "name": "Reserva Selva",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 36.99028,
+        "lng": 101.53388,
+        "name": "Bosque EcoVida",
+        "country": "China",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -30.03839,
+        "lng": -71.14877,
+        "name": "Santuario Amazonas",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 46.75469,
+        "lng": 3.13902,
+        "name": "Parque Verde",
+        "country": "Francia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -38.33118,
+        "lng": -65.45118,
+        "name": "Santuario Verde",
+        "country": "Argentina",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 50.59267,
+        "lng": 10.69613,
+        "name": "Refugio Andino",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.45862,
+        "lng": 76.10106,
+        "name": "Bosque Verde",
+        "country": "India",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.15426,
+        "lng": -95.87322,
+        "name": "Reserva EcoVida",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 34.57371,
+        "lng": 136.22343,
+        "name": "Santuario Verde",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -25.28003,
+        "lng": 135.81117,
+        "name": "Bosque EcoVida",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 38.90916,
+        "lng": 135.53441,
+        "name": "Santuario Andino",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 53.51117,
+        "lng": -3.80154,
+        "name": "Santuario Esperanza",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 58.18003,
+        "lng": -4.03891,
+        "name": "Parque EcoVida",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 20.36175,
+        "lng": 76.7482,
+        "name": "Santuario Selva",
+        "country": "India",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -37.80379,
+        "lng": -60.38732,
+        "name": "Refugio EcoVida",
+        "country": "Argentina",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 57.5701,
+        "lng": -106.22673,
+        "name": "Refugio Pacífico",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -35.41256,
+        "lng": -69.59662,
+        "name": "Santuario Esperanza",
+        "country": "Chile",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -14.42843,
+        "lng": -66.45708,
+        "name": "Parque Solar",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 50.96525,
+        "lng": 9.59843,
+        "name": "Reserva Andino",
+        "country": "Alemania",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -15.94404,
+        "lng": -66.65607,
+        "name": "Refugio Selva",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -8.94168,
+        "lng": -55.35276,
+        "name": "Bosque EcoVida",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -28.77303,
+        "lng": 23.37885,
+        "name": "Refugio Pacífico",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -9.78814,
+        "lng": -77.51696,
+        "name": "Reserva Pacífico",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.61967,
+        "lng": -3.41572,
+        "name": "Reserva Selva",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -17.39145,
+        "lng": -64.99873,
+        "name": "Santuario Verde",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 52.96512,
+        "lng": -6.18717,
+        "name": "Santuario Selva",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -18.74445,
+        "lng": -62.41094,
+        "name": "Bosque Verde",
+        "country": "Bolivia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 2.0115,
+        "lng": -76.60978,
+        "name": "Parque Esperanza",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -30.41295,
+        "lng": -70.57853,
+        "name": "Parque Verde",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -11.51055,
+        "lng": -57.36905,
+        "name": "Parque Andino",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 32.47289,
+        "lng": 101.75728,
+        "name": "Refugio Verde",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 3.13846,
+        "lng": -76.72455,
+        "name": "Parque Andino",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -27.34357,
+        "lng": 131.78326,
+        "name": "Santuario Selva",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 24.52058,
+        "lng": -104.68184,
+        "name": "Bosque Amazonas",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 35.16555,
+        "lng": 101.05765,
+        "name": "Bosque Solar",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -14.78294,
+        "lng": -63.29944,
+        "name": "Refugio Pacífico",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 22.94612,
+        "lng": 75.98295,
+        "name": "Parque Solar",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 23.9875,
+        "lng": -102.29233,
+        "name": "Santuario Verde",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -35.16644,
+        "lng": -61.44578,
+        "name": "Bosque EcoVida",
+        "country": "Argentina",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -28.72572,
+        "lng": 20.64835,
+        "name": "Santuario Verde",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 2.83623,
+        "lng": -72.96181,
+        "name": "Bosque Andino",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 39.62967,
+        "lng": -92.37224,
+        "name": "Santuario Verde",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 6.69252,
+        "lng": -76.65303,
+        "name": "Refugio Selva",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -19.59439,
+        "lng": -66.30441,
+        "name": "Santuario Andino",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -12.55531,
+        "lng": -54.85112,
+        "name": "Reserva EcoVida",
+        "country": "Brasil",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 57.08718,
+        "lng": -3.51672,
+        "name": "Parque Andino",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -11.79307,
+        "lng": -77.79626,
+        "name": "Santuario Esperanza",
+        "country": "Perú",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 44.11085,
+        "lng": 12.28272,
+        "name": "Bosque Pacífico",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 51.51506,
+        "lng": 11.3067,
+        "name": "Santuario Esperanza",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 38.49059,
+        "lng": -93.04971,
+        "name": "Refugio Pacífico",
+        "country": "Estados Unidos",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 58.01288,
+        "lng": -107.39742,
+        "name": "Refugio Selva",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -8.90965,
+        "lng": -56.80351,
+        "name": "Santuario EcoVida",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 48.9939,
+        "lng": 8.93467,
+        "name": "Refugio Solar",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -10.9375,
+        "lng": -77.62205,
+        "name": "Bosque Amazonas",
+        "country": "Perú",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 19.16732,
+        "lng": 79.48676,
+        "name": "Refugio Verde",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -24.83697,
+        "lng": 136.47254,
+        "name": "Parque Selva",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 33.5278,
+        "lng": 141.29685,
+        "name": "Parque EcoVida",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 58.89714,
+        "lng": -108.43471,
+        "name": "Bosque Esperanza",
+        "country": "Canadá",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 51.75705,
+        "lng": 10.99312,
+        "name": "Santuario Esperanza",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 4.27745,
+        "lng": -75.50199,
+        "name": "Reserva EcoVida",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.52018,
+        "lng": 9.76867,
+        "name": "Santuario Verde",
+        "country": "Alemania",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 33.42905,
+        "lng": 103.09735,
+        "name": "Reserva Verde",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 38.0644,
+        "lng": -95.3843,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 38.99959,
+        "lng": 138.14031,
+        "name": "Bosque Verde",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -7.40104,
+        "lng": -54.84609,
+        "name": "Reserva Andino",
+        "country": "Brasil",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 23.65262,
+        "lng": -100.29414,
+        "name": "Parque Amazonas",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 58.14829,
+        "lng": -2.32534,
+        "name": "Parque Solar",
+        "country": "Reino Unido",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 38.5965,
+        "lng": 137.93102,
+        "name": "Santuario EcoVida",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -32.16611,
+        "lng": -70.30659,
+        "name": "Refugio Andino",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -10.95109,
+        "lng": -72.18799,
+        "name": "Parque EcoVida",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 36.25128,
+        "lng": -95.05601,
+        "name": "Parque Selva",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -7.63444,
+        "lng": -75.81709,
+        "name": "Reserva Verde",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 63.39445,
+        "lng": 106.5524,
+        "name": "Refugio Verde",
+        "country": "Rusia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 55.08919,
+        "lng": -2.01948,
+        "name": "Bosque Solar",
+        "country": "Reino Unido",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -8.53334,
+        "lng": -52.65729,
+        "name": "Bosque Amazonas",
+        "country": "Brasil",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -32.76012,
+        "lng": -70.3477,
+        "name": "Santuario Amazonas",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.42068,
+        "lng": 139.24437,
+        "name": "Bosque Selva",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 63.99488,
+        "lng": 105.14684,
+        "name": "Refugio Amazonas",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -31.43903,
+        "lng": 22.92355,
+        "name": "Bosque Verde",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 7.00127,
+        "lng": -75.24617,
+        "name": "Bosque Selva",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.28646,
+        "lng": -92.02225,
+        "name": "Parque Solar",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 23.50902,
+        "lng": -101.92756,
+        "name": "Parque Selva",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -7.73094,
+        "lng": -57.64502,
+        "name": "Refugio EcoVida",
+        "country": "Brasil",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 40.06623,
+        "lng": -4.57252,
+        "name": "Reserva Pacífico",
+        "country": "España",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 36.60063,
+        "lng": -92.08954,
+        "name": "Bosque Solar",
+        "country": "Estados Unidos",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -11.26027,
+        "lng": -76.19686,
+        "name": "Reserva Andino",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -7.73504,
+        "lng": -54.91724,
+        "name": "Reserva Selva",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.11972,
+        "lng": -2.57742,
+        "name": "Reserva Amazonas",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 59.28028,
+        "lng": 102.84051,
+        "name": "Refugio Esperanza",
+        "country": "Rusia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 22.08364,
+        "lng": -102.85738,
+        "name": "Refugio Selva",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 44.12176,
+        "lng": -0.40065,
+        "name": "Refugio Pacífico",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -35.50472,
+        "lng": -60.49538,
+        "name": "Refugio Andino",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 47.18537,
+        "lng": -0.73904,
+        "name": "Parque Solar",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -29.76057,
+        "lng": 24.09638,
+        "name": "Santuario Verde",
+        "country": "Sudáfrica",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.60716,
+        "lng": 138.09104,
+        "name": "Parque Solar",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -23.55227,
+        "lng": 131.87334,
+        "name": "Refugio Selva",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.01724,
+        "lng": -0.94402,
+        "name": "Bosque EcoVida",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 53.90189,
+        "lng": -106.47373,
+        "name": "Santuario Pacífico",
+        "country": "Canadá",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 53.46379,
+        "lng": -4.04271,
+        "name": "Reserva Esperanza",
+        "country": "Reino Unido",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -26.96031,
+        "lng": 134.60652,
+        "name": "Reserva Solar",
+        "country": "Australia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 21.81431,
+        "lng": 75.90623,
+        "name": "Parque Solar",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 25.88634,
+        "lng": -104.57667,
+        "name": "Santuario Verde",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.74563,
+        "lng": -92.81844,
+        "name": "Bosque Solar",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 55.98171,
+        "lng": -107.2949,
+        "name": "Santuario Selva",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.10653,
+        "lng": 1.05784,
+        "name": "Refugio Pacífico",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -30.99095,
+        "lng": 23.63134,
+        "name": "Reserva Esperanza",
+        "country": "Sudáfrica",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 36.8612,
+        "lng": 137.16267,
+        "name": "Reserva Esperanza",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 22.09607,
+        "lng": 77.21406,
+        "name": "Santuario EcoVida",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 52.48097,
+        "lng": 9.58241,
+        "name": "Refugio Pacífico",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 40.52923,
+        "lng": -6.05795,
+        "name": "Reserva EcoVida",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 39.05352,
+        "lng": -2.06275,
+        "name": "Refugio Andino",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 54.01169,
+        "lng": 7.97121,
+        "name": "Santuario Solar",
+        "country": "Alemania",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 1.69381,
+        "lng": -75.74296,
+        "name": "Reserva Solar",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 3.88431,
+        "lng": -71.01658,
+        "name": "Refugio Andino",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 41.66813,
+        "lng": 13.63516,
+        "name": "Refugio Selva",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -14.35405,
+        "lng": -64.23017,
+        "name": "Parque Andino",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 42.16414,
+        "lng": -4.47642,
+        "name": "Refugio Pacífico",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 52.79901,
+        "lng": -4.67461,
+        "name": "Santuario Selva",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 44.61275,
+        "lng": 4.86605,
+        "name": "Refugio Andino",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 37.4937,
+        "lng": 137.8517,
+        "name": "Parque Esperanza",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 21.54543,
+        "lng": 78.05975,
+        "name": "Refugio Selva",
+        "country": "India",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -11.83639,
+        "lng": -72.49377,
+        "name": "Bosque Amazonas",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -10.53385,
+        "lng": -75.60004,
+        "name": "Parque Amazonas",
+        "country": "Perú",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 34.02302,
+        "lng": -94.60328,
+        "name": "Refugio Amazonas",
+        "country": "Estados Unidos",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 6.56834,
+        "lng": -72.83593,
+        "name": "Santuario Andino",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -17.07915,
+        "lng": -63.17636,
+        "name": "Santuario Selva",
+        "country": "Bolivia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -33.05777,
+        "lng": 20.92441,
+        "name": "Parque Verde",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -40.24614,
+        "lng": -61.78129,
+        "name": "Refugio EcoVida",
+        "country": "Argentina",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 36.53616,
+        "lng": 101.05559,
+        "name": "Reserva Andino",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 32.17467,
+        "lng": 105.27515,
+        "name": "Bosque Amazonas",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -15.92906,
+        "lng": -67.11879,
+        "name": "Bosque Solar",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 45.71485,
+        "lng": 13.6994,
+        "name": "Santuario Selva",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 55.8011,
+        "lng": -2.52915,
+        "name": "Bosque Amazonas",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 3.13794,
+        "lng": -76.81266,
+        "name": "Bosque Esperanza",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -40.57943,
+        "lng": -63.17863,
+        "name": "Refugio EcoVida",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -23.89011,
+        "lng": 132.81685,
+        "name": "Reserva Esperanza",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 40.36407,
+        "lng": 10.32152,
+        "name": "Reserva Solar",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 24.86893,
+        "lng": -99.21177,
+        "name": "Bosque EcoVida",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 44.96275,
+        "lng": 1.15159,
+        "name": "Refugio Selva",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 54.42484,
+        "lng": -0.46579,
+        "name": "Bosque EcoVida",
+        "country": "Reino Unido",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 33.68324,
+        "lng": 138.87293,
+        "name": "Bosque Esperanza",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 56.9997,
+        "lng": -5.29941,
+        "name": "Reserva Solar",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 41.79757,
+        "lng": -2.88773,
+        "name": "Refugio Esperanza",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 3.92884,
+        "lng": -73.08498,
+        "name": "Bosque Verde",
+        "country": "Colombia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 21.8829,
+        "lng": 76.39529,
+        "name": "Reserva Andino",
+        "country": "India",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 40.70565,
+        "lng": 11.86357,
+        "name": "Bosque Selva",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 58.68626,
+        "lng": 102.87473,
+        "name": "Refugio Pacífico",
+        "country": "Rusia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -18.37423,
+        "lng": -65.82643,
+        "name": "Santuario Esperanza",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 58.62835,
+        "lng": -105.62167,
+        "name": "Refugio Solar",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.17664,
+        "lng": 103.56344,
+        "name": "Refugio Selva",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 35.2579,
+        "lng": -92.48978,
+        "name": "Reserva Solar",
+        "country": "Estados Unidos",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -35.4782,
+        "lng": -74.3475,
+        "name": "Parque Selva",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 56.89817,
+        "lng": -0.85472,
+        "name": "Parque EcoVida",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 33.61317,
+        "lng": 103.74412,
+        "name": "Bosque EcoVida",
+        "country": "China",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 40.83503,
+        "lng": 13.2879,
+        "name": "Reserva Verde",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 55.65286,
+        "lng": -6.26983,
+        "name": "Bosque Selva",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -37.59203,
+        "lng": -65.28795,
+        "name": "Parque Esperanza",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 23.83828,
+        "lng": -103.69277,
+        "name": "Bosque Selva",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 37.33513,
+        "lng": -96.00786,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -28.18609,
+        "lng": 21.41707,
+        "name": "Santuario Verde",
+        "country": "Sudáfrica",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 53.76195,
+        "lng": -4.05767,
+        "name": "Reserva Amazonas",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 3.89268,
+        "lng": -74.2193,
+        "name": "Reserva Solar",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 38.75334,
+        "lng": -5.34225,
+        "name": "Refugio Solar",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 4.82373,
+        "lng": -73.52279,
+        "name": "Santuario EcoVida",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -10.80892,
+        "lng": -53.56728,
+        "name": "Parque Selva",
+        "country": "Brasil",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 58.11766,
+        "lng": -108.67266,
+        "name": "Santuario Esperanza",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 42.52357,
+        "lng": 13.04818,
+        "name": "Reserva Pacífico",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -11.66288,
+        "lng": -54.98356,
+        "name": "Santuario EcoVida",
+        "country": "Brasil",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 42.81615,
+        "lng": 12.98296,
+        "name": "Santuario Solar",
+        "country": "Italia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -23.78879,
+        "lng": 135.13406,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 17.74178,
+        "lng": 79.75964,
+        "name": "Reserva Pacífico",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -29.4246,
+        "lng": 23.86006,
+        "name": "Bosque Selva",
+        "country": "Sudáfrica",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 40.7575,
+        "lng": -2.59624,
+        "name": "Parque Esperanza",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -32.49385,
+        "lng": 23.30456,
+        "name": "Bosque Esperanza",
+        "country": "Sudáfrica",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 17.87307,
+        "lng": 77.08809,
+        "name": "Bosque Pacífico",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 21.13558,
+        "lng": 76.35614,
+        "name": "Santuario Amazonas",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -23.71294,
+        "lng": 134.67986,
+        "name": "Parque EcoVida",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 43.87141,
+        "lng": -0.58805,
+        "name": "Bosque Pacífico",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.81805,
+        "lng": 10.6227,
+        "name": "Parque Solar",
+        "country": "Alemania",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 61.97307,
+        "lng": 105.78454,
+        "name": "Reserva Pacífico",
+        "country": "Rusia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 23.4291,
+        "lng": -102.49544,
+        "name": "Bosque Amazonas",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 59.89133,
+        "lng": 106.3283,
+        "name": "Reserva Solar",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 35.45245,
+        "lng": 101.49693,
+        "name": "Santuario EcoVida",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 5.16305,
+        "lng": -76.51148,
+        "name": "Santuario Verde",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 48.50868,
+        "lng": 1.28054,
+        "name": "Parque Verde",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 53.16125,
+        "lng": -106.30578,
+        "name": "Bosque Pacífico",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.81297,
+        "lng": -56.241,
+        "name": "Parque Selva",
+        "country": "Brasil",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -12.85478,
+        "lng": -56.20735,
+        "name": "Refugio Esperanza",
+        "country": "Brasil",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 1.59794,
+        "lng": -75.28486,
+        "name": "Reserva Amazonas",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 38.67062,
+        "lng": 135.98687,
+        "name": "Refugio Pacífico",
+        "country": "Japón",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 37.4543,
+        "lng": 103.50105,
+        "name": "Santuario Selva",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -26.87566,
+        "lng": 132.05223,
+        "name": "Santuario Verde",
+        "country": "Australia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 61.8499,
+        "lng": 107.87846,
+        "name": "Refugio Amazonas",
+        "country": "Rusia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.61243,
+        "lng": 2.8876,
+        "name": "Refugio Amazonas",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -18.9225,
+        "lng": -63.68444,
+        "name": "Bosque Selva",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -17.69818,
+        "lng": -66.15806,
+        "name": "Santuario Solar",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 44.08146,
+        "lng": 13.86929,
+        "name": "Refugio Amazonas",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -31.86593,
+        "lng": -74.14136,
+        "name": "Santuario Pacífico",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.59921,
+        "lng": 140.02384,
+        "name": "Santuario Andino",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 43.33775,
+        "lng": 4.7904,
+        "name": "Refugio Solar",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 41.58284,
+        "lng": -3.84057,
+        "name": "Santuario Selva",
+        "country": "España",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -14.61216,
+        "lng": -62.28146,
+        "name": "Santuario Esperanza",
+        "country": "Bolivia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.53242,
+        "lng": 139.59325,
+        "name": "Santuario Esperanza",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.61734,
+        "lng": 105.08268,
+        "name": "Reserva Esperanza",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.82713,
+        "lng": 77.4652,
+        "name": "Refugio Andino",
+        "country": "India",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -37.35135,
+        "lng": -62.73305,
+        "name": "Refugio Amazonas",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -35.79589,
+        "lng": -70.57564,
+        "name": "Parque Solar",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 20.03864,
+        "lng": -102.98791,
+        "name": "Parque Andino",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -28.19014,
+        "lng": 135.72799,
+        "name": "Reserva EcoVida",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 53.39193,
+        "lng": 11.59557,
+        "name": "Santuario EcoVida",
+        "country": "Alemania",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -30.95837,
+        "lng": -72.95918,
+        "name": "Reserva Amazonas",
+        "country": "Chile",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 25.3543,
+        "lng": -102.55964,
+        "name": "Bosque Esperanza",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 37.46506,
+        "lng": 135.96013,
+        "name": "Santuario Verde",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 6.3014,
+        "lng": -74.07372,
+        "name": "Reserva Esperanza",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 34.73391,
+        "lng": 137.179,
+        "name": "Bosque Amazonas",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 47.55911,
+        "lng": -0.19794,
+        "name": "Parque Amazonas",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 48.64776,
+        "lng": 0.21513,
+        "name": "Reserva Amazonas",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 6.7857,
+        "lng": -73.68514,
+        "name": "Parque Verde",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 5.71775,
+        "lng": -76.26952,
+        "name": "Refugio Solar",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.30914,
+        "lng": 102.90527,
+        "name": "Bosque Andino",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 20.90824,
+        "lng": 81.54209,
+        "name": "Reserva Pacífico",
+        "country": "India",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 46.66318,
+        "lng": 0.91068,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 6.7833,
+        "lng": -73.85052,
+        "name": "Parque Selva",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -29.87141,
+        "lng": 20.59025,
+        "name": "Reserva Selva",
+        "country": "Sudáfrica",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 57.48926,
+        "lng": -108.05457,
+        "name": "Reserva Amazonas",
+        "country": "Canadá",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -39.71857,
+        "lng": -60.92139,
+        "name": "Reserva Andino",
+        "country": "Argentina",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 51.34566,
+        "lng": 9.31988,
+        "name": "Bosque EcoVida",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 39.62102,
+        "lng": -0.70362,
+        "name": "Bosque Verde",
+        "country": "España",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 6.10932,
+        "lng": -76.77727,
+        "name": "Reserva Verde",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -31.74394,
+        "lng": -70.08921,
+        "name": "Santuario Amazonas",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -33.66037,
+        "lng": -72.08945,
+        "name": "Parque Andino",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 39.93754,
+        "lng": -94.69109,
+        "name": "Reserva Selva",
+        "country": "Estados Unidos",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.23738,
+        "lng": 138.34719,
+        "name": "Santuario Esperanza",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.81777,
+        "lng": -96.55014,
+        "name": "Refugio Pacífico",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 59.49983,
+        "lng": 106.42528,
+        "name": "Reserva EcoVida",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -15.56536,
+        "lng": -62.92199,
+        "name": "Parque Andino",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -18.83431,
+        "lng": -64.82199,
+        "name": "Santuario Verde",
+        "country": "Bolivia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 37.86714,
+        "lng": 139.67218,
+        "name": "Santuario Verde",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 34.17752,
+        "lng": 102.30409,
+        "name": "Reserva Pacífico",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -27.07713,
+        "lng": 135.00331,
+        "name": "Reserva Verde",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 7.30158,
+        "lng": -74.60669,
+        "name": "Santuario Pacífico",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -27.6837,
+        "lng": 24.45624,
+        "name": "Santuario Solar",
+        "country": "Sudáfrica",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 39.86882,
+        "lng": -1.88487,
+        "name": "Refugio Solar",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -27.17296,
+        "lng": 132.88429,
+        "name": "Bosque Andino",
+        "country": "Australia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 44.69058,
+        "lng": 12.68479,
+        "name": "Santuario EcoVida",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 57.44355,
+        "lng": -3.94839,
+        "name": "Parque Esperanza",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 41.70429,
+        "lng": 9.64502,
+        "name": "Santuario Esperanza",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 56.01587,
+        "lng": -4.82222,
+        "name": "Bosque Pacífico",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -26.4742,
+        "lng": 135.7504,
+        "name": "Refugio Pacífico",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 35.96673,
+        "lng": 140.25809,
+        "name": "Santuario Pacífico",
+        "country": "Japón",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 33.60448,
+        "lng": 102.16604,
+        "name": "Parque Verde",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 64.00837,
+        "lng": 102.38937,
+        "name": "Santuario Selva",
+        "country": "Rusia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 40.96639,
+        "lng": 12.49513,
+        "name": "Santuario Selva",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -28.2304,
+        "lng": 23.9022,
+        "name": "Santuario Solar",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -25.15497,
+        "lng": 132.23778,
+        "name": "Reserva Amazonas",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -15.59021,
+        "lng": -62.74971,
+        "name": "Refugio Solar",
+        "country": "Bolivia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 41.40447,
+        "lng": 12.40819,
+        "name": "Parque Pacífico",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -32.02411,
+        "lng": 19.95286,
+        "name": "Refugio EcoVida",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -23.75842,
+        "lng": 132.89193,
+        "name": "Santuario Amazonas",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 36.41296,
+        "lng": 139.34836,
+        "name": "Santuario Esperanza",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 41.75455,
+        "lng": 15.43659,
+        "name": "Santuario Esperanza",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 39.64512,
+        "lng": -5.28232,
+        "name": "Reserva Solar",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.94226,
+        "lng": 137.0126,
+        "name": "Parque Solar",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 53.96116,
+        "lng": 10.22809,
+        "name": "Bosque Amazonas",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 45.55903,
+        "lng": 13.16666,
+        "name": "Parque EcoVida",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 61.04276,
+        "lng": 108.29521,
+        "name": "Santuario Amazonas",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 38.58695,
+        "lng": 135.81688,
+        "name": "Reserva Pacífico",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.79084,
+        "lng": 103.64966,
+        "name": "Parque Andino",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 36.15758,
+        "lng": -92.3923,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -32.10844,
+        "lng": 20.82813,
+        "name": "Reserva Andino",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -38.80793,
+        "lng": -64.94363,
+        "name": "Parque Verde",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -36.48596,
+        "lng": -62.38926,
+        "name": "Santuario Verde",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -7.0997,
+        "lng": -52.31729,
+        "name": "Refugio Amazonas",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 40.21867,
+        "lng": 14.43109,
+        "name": "Bosque Pacífico",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 44.18957,
+        "lng": 2.35133,
+        "name": "Bosque Andino",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.59882,
+        "lng": -105.40824,
+        "name": "Reserva Solar",
+        "country": "Canadá",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -30.32005,
+        "lng": 20.83108,
+        "name": "Parque Pacífico",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 51.48128,
+        "lng": 10.57857,
+        "name": "Refugio Verde",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -36.82394,
+        "lng": -60.98733,
+        "name": "Refugio Amazonas",
+        "country": "Argentina",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 60.90947,
+        "lng": 103.19439,
+        "name": "Parque Pacífico",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -35.89264,
+        "lng": -60.03918,
+        "name": "Santuario Pacífico",
+        "country": "Argentina",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.26276,
+        "lng": -75.33947,
+        "name": "Reserva Pacífico",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -39.22623,
+        "lng": -64.56547,
+        "name": "Reserva Verde",
+        "country": "Argentina",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -25.87217,
+        "lng": 133.39803,
+        "name": "Reserva Solar",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 3.3945,
+        "lng": -75.05622,
+        "name": "Santuario Andino",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -30.00564,
+        "lng": 21.48643,
+        "name": "Refugio EcoVida",
+        "country": "Sudáfrica",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -40.52014,
+        "lng": -65.07188,
+        "name": "Refugio Pacífico",
+        "country": "Argentina",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 53.04742,
+        "lng": -108.69051,
+        "name": "Refugio Verde",
+        "country": "Canadá",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 2.29121,
+        "lng": -75.46723,
+        "name": "Santuario Andino",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 1.55439,
+        "lng": -72.11476,
+        "name": "Santuario Andino",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 19.15547,
+        "lng": 80.99259,
+        "name": "Reserva Selva",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -15.31577,
+        "lng": -65.10596,
+        "name": "Reserva Solar",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 45.04657,
+        "lng": 2.88461,
+        "name": "Refugio Selva",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 23.62415,
+        "lng": -101.14066,
+        "name": "Santuario Esperanza",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.49546,
+        "lng": -6.25606,
+        "name": "Reserva EcoVida",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 23.54995,
+        "lng": 79.66923,
+        "name": "Reserva Verde",
+        "country": "India",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 38.77043,
+        "lng": 135.74036,
+        "name": "Bosque Selva",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -33.34484,
+        "lng": 23.97435,
+        "name": "Reserva Amazonas",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 55.25116,
+        "lng": -104.7348,
+        "name": "Parque Selva",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.35627,
+        "lng": -74.15465,
+        "name": "Reserva Pacífico",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 49.87589,
+        "lng": 11.0351,
+        "name": "Refugio Selva",
+        "country": "Alemania",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 38.98076,
+        "lng": -97.049,
+        "name": "Refugio Verde",
+        "country": "Estados Unidos",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 24.78724,
+        "lng": -102.69212,
+        "name": "Santuario EcoVida",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 24.05477,
+        "lng": -100.35672,
+        "name": "Refugio Pacífico",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 45.13244,
+        "lng": 0.34099,
+        "name": "Santuario Verde",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -32.75444,
+        "lng": 22.06644,
+        "name": "Bosque Selva",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 40.19399,
+        "lng": 10.50286,
+        "name": "Santuario Solar",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 54.04458,
+        "lng": -105.75817,
+        "name": "Refugio Selva",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 55.8965,
+        "lng": -3.67473,
+        "name": "Refugio Selva",
+        "country": "Reino Unido",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 33.11872,
+        "lng": 105.0259,
+        "name": "Bosque Verde",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -27.358,
+        "lng": 132.22373,
+        "name": "Bosque Verde",
+        "country": "Australia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 41.68922,
+        "lng": 12.90493,
+        "name": "Refugio Andino",
+        "country": "Italia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -16.87772,
+        "lng": -66.25199,
+        "name": "Refugio Verde",
+        "country": "Bolivia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 56.3799,
+        "lng": -107.13455,
+        "name": "Bosque EcoVida",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 47.22614,
+        "lng": 1.63362,
+        "name": "Refugio EcoVida",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 53.01135,
+        "lng": 10.52847,
+        "name": "Reserva Amazonas",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 53.6619,
+        "lng": -0.53544,
+        "name": "Santuario Verde",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -11.99276,
+        "lng": -74.54948,
+        "name": "Bosque EcoVida",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 33.17711,
+        "lng": 101.61984,
+        "name": "Bosque EcoVida",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -35.72353,
+        "lng": -70.76319,
+        "name": "Parque Andino",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.3536,
+        "lng": 137.47938,
+        "name": "Parque Esperanza",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 54.30323,
+        "lng": -3.39995,
+        "name": "Refugio EcoVida",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -27.70913,
+        "lng": 135.09363,
+        "name": "Refugio Amazonas",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -28.62922,
+        "lng": 24.57165,
+        "name": "Santuario Amazonas",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 37.22017,
+        "lng": -95.57239,
+        "name": "Parque Verde",
+        "country": "Estados Unidos",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 21.81359,
+        "lng": -102.43589,
+        "name": "Refugio Andino",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -31.03239,
+        "lng": 25.35575,
+        "name": "Bosque Andino",
+        "country": "Sudáfrica",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 39.25784,
+        "lng": -6.55015,
+        "name": "Reserva Esperanza",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 25.60077,
+        "lng": -102.3165,
+        "name": "Refugio Verde",
+        "country": "México",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.16262,
+        "lng": -3.10312,
+        "name": "Santuario Selva",
+        "country": "Reino Unido",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -16.96737,
+        "lng": -65.15329,
+        "name": "Bosque Verde",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 50.18976,
+        "lng": 13.13157,
+        "name": "Santuario Verde",
+        "country": "Alemania",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.00044,
+        "lng": 137.85163,
+        "name": "Bosque Andino",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -26.00313,
+        "lng": 136.35618,
+        "name": "Bosque Selva",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 2.85886,
+        "lng": -71.37541,
+        "name": "Bosque Verde",
+        "country": "Colombia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -7.78525,
+        "lng": -73.68778,
+        "name": "Santuario Solar",
+        "country": "Perú",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 56.89069,
+        "lng": -6.16937,
+        "name": "Refugio Amazonas",
+        "country": "Reino Unido",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 32.24172,
+        "lng": 101.05059,
+        "name": "Bosque Verde",
+        "country": "China",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.52604,
+        "lng": -96.2888,
+        "name": "Reserva Andino",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 22.36045,
+        "lng": 81.21791,
+        "name": "Parque Esperanza",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 45.73252,
+        "lng": 2.78615,
+        "name": "Bosque Solar",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -35.47605,
+        "lng": -64.69277,
+        "name": "Santuario Verde",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 44.3636,
+        "lng": 1.22309,
+        "name": "Refugio EcoVida",
+        "country": "Francia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -37.82351,
+        "lng": -64.44961,
+        "name": "Parque Selva",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -11.89797,
+        "lng": -75.60219,
+        "name": "Parque Esperanza",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 48.76743,
+        "lng": 3.57672,
+        "name": "Parque Solar",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 35.23417,
+        "lng": -93.33622,
+        "name": "Bosque Amazonas",
+        "country": "Estados Unidos",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 55.15439,
+        "lng": -105.26554,
+        "name": "Parque Andino",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 17.87229,
+        "lng": 76.4403,
+        "name": "Reserva Esperanza",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 64.11547,
+        "lng": 102.53221,
+        "name": "Refugio Solar",
+        "country": "Rusia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -6.71248,
+        "lng": -74.28752,
+        "name": "Santuario Esperanza",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -19.09182,
+        "lng": -67.03236,
+        "name": "Refugio Pacífico",
+        "country": "Bolivia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 53.39838,
+        "lng": -105.70779,
+        "name": "Parque Esperanza",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 19.79722,
+        "lng": 81.81154,
+        "name": "Parque Selva",
+        "country": "India",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 63.4117,
+        "lng": 102.44347,
+        "name": "Refugio Verde",
+        "country": "Rusia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 5.51591,
+        "lng": -76.47597,
+        "name": "Bosque EcoVida",
+        "country": "Colombia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 37.02249,
+        "lng": 103.64202,
+        "name": "Refugio EcoVida",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 33.72314,
+        "lng": 141.29921,
+        "name": "Parque Solar",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 39.35963,
+        "lng": -6.16112,
+        "name": "Bosque Solar",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 37.27855,
+        "lng": -97.26202,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 52.20915,
+        "lng": 7.88224,
+        "name": "Parque Verde",
+        "country": "Alemania",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 37.93631,
+        "lng": 136.71831,
+        "name": "Refugio Esperanza",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 45.71121,
+        "lng": 11.7403,
+        "name": "Refugio Solar",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -18.47454,
+        "lng": -64.89694,
+        "name": "Reserva Andino",
+        "country": "Bolivia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 45.09524,
+        "lng": 10.22965,
+        "name": "Santuario Selva",
+        "country": "Italia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.03349,
+        "lng": 104.0375,
+        "name": "Reserva Selva",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -26.29312,
+        "lng": 131.08705,
+        "name": "Refugio Verde",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -28.31025,
+        "lng": 22.04921,
+        "name": "Bosque Amazonas",
+        "country": "Sudáfrica",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 24.63332,
+        "lng": -99.56446,
+        "name": "Bosque Esperanza",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 37.2287,
+        "lng": -92.39409,
+        "name": "Reserva Selva",
+        "country": "Estados Unidos",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 43.52954,
+        "lng": 0.62956,
+        "name": "Reserva EcoVida",
+        "country": "Francia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -34.57184,
+        "lng": -72.00943,
+        "name": "Bosque Esperanza",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 3.00926,
+        "lng": -76.92193,
+        "name": "Bosque Pacífico",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -25.20347,
+        "lng": 134.25627,
+        "name": "Reserva Selva",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 37.19488,
+        "lng": 138.23277,
+        "name": "Refugio Solar",
+        "country": "Japón",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 21.66317,
+        "lng": 78.39341,
+        "name": "Santuario Selva",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 44.2198,
+        "lng": 15.27568,
+        "name": "Parque Solar",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 32.20418,
+        "lng": 105.25189,
+        "name": "Bosque Andino",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -11.62534,
+        "lng": -75.84978,
+        "name": "Refugio Andino",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 34.06645,
+        "lng": 104.30729,
+        "name": "Santuario Andino",
+        "country": "China",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 35.23314,
+        "lng": 138.27034,
+        "name": "Refugio Andino",
+        "country": "Japón",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 43.65653,
+        "lng": -0.30035,
+        "name": "Reserva Pacífico",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 35.99596,
+        "lng": 103.87244,
+        "name": "Santuario Selva",
+        "country": "China",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 20.67407,
+        "lng": 81.19639,
+        "name": "Parque Esperanza",
+        "country": "India",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 3.52934,
+        "lng": -75.68757,
+        "name": "Bosque Selva",
+        "country": "Colombia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -19.25735,
+        "lng": -65.1742,
+        "name": "Parque Verde",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 61.46374,
+        "lng": 103.89741,
+        "name": "Bosque Amazonas",
+        "country": "Rusia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 39.66589,
+        "lng": -96.61714,
+        "name": "Parque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 48.52886,
+        "lng": 9.53723,
+        "name": "Refugio Amazonas",
+        "country": "Alemania",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 39.25053,
+        "lng": -3.86329,
+        "name": "Reserva Pacífico",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 35.76589,
+        "lng": 137.97821,
+        "name": "Refugio Pacífico",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 55.77538,
+        "lng": -1.55026,
+        "name": "Parque Amazonas",
+        "country": "Reino Unido",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 54.77349,
+        "lng": -3.92883,
+        "name": "Bosque Verde",
+        "country": "Reino Unido",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 46.17039,
+        "lng": 4.86055,
+        "name": "Bosque Andino",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 32.53751,
+        "lng": 102.6829,
+        "name": "Refugio Selva",
+        "country": "China",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 41.62553,
+        "lng": -4.1242,
+        "name": "Parque Selva",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -26.97042,
+        "lng": 135.27717,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 61.99941,
+        "lng": 105.66236,
+        "name": "Parque Solar",
+        "country": "Rusia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -36.01881,
+        "lng": -63.07447,
+        "name": "Reserva Esperanza",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -22.96056,
+        "lng": 134.57273,
+        "name": "Refugio Esperanza",
+        "country": "Australia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 44.98541,
+        "lng": 3.35963,
+        "name": "Bosque EcoVida",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 57.06342,
+        "lng": -1.43928,
+        "name": "Bosque Esperanza",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 39.35556,
+        "lng": -6.66585,
+        "name": "Refugio Pacífico",
+        "country": "España",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.97205,
+        "lng": -1.05408,
+        "name": "Reserva Pacífico",
+        "country": "España",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 48.16089,
+        "lng": 1.40416,
+        "name": "Reserva Esperanza",
+        "country": "Francia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -11.8264,
+        "lng": -52.72074,
+        "name": "Santuario Andino",
+        "country": "Brasil",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -24.1746,
+        "lng": 136.38215,
+        "name": "Bosque Selva",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 32.0043,
+        "lng": 104.25536,
+        "name": "Bosque Verde",
+        "country": "China",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -24.6597,
+        "lng": 136.45852,
+        "name": "Santuario Amazonas",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 50.44234,
+        "lng": 11.63795,
+        "name": "Bosque EcoVida",
+        "country": "Alemania",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 33.63567,
+        "lng": 105.62349,
+        "name": "Santuario Esperanza",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -11.12651,
+        "lng": -76.67149,
+        "name": "Reserva Andino",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -23.75067,
+        "lng": 134.15605,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 42.80828,
+        "lng": -4.01535,
+        "name": "Refugio Esperanza",
+        "country": "España",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 42.85595,
+        "lng": 13.98152,
+        "name": "Refugio Amazonas",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 21.04884,
+        "lng": -103.56014,
+        "name": "Bosque Solar",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 45.73007,
+        "lng": 1.40041,
+        "name": "Santuario Esperanza",
+        "country": "Francia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -24.5805,
+        "lng": 134.40533,
+        "name": "Refugio Andino",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -30.03905,
+        "lng": 20.48364,
+        "name": "Reserva Pacífico",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 21.31135,
+        "lng": 81.74187,
+        "name": "Refugio Selva",
+        "country": "India",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 52.94079,
+        "lng": -6.35497,
+        "name": "Reserva Amazonas",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -29.93197,
+        "lng": 20.45571,
+        "name": "Santuario Selva",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 57.84192,
+        "lng": -104.33785,
+        "name": "Santuario Solar",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 41.14256,
+        "lng": 15.20599,
+        "name": "Bosque Esperanza",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.8537,
+        "lng": -57.97966,
+        "name": "Parque Pacífico",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -31.58857,
+        "lng": -71.42553,
+        "name": "Bosque Verde",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 63.03771,
+        "lng": 105.92887,
+        "name": "Reserva Solar",
+        "country": "Rusia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -29.17498,
+        "lng": 23.91525,
+        "name": "Bosque Andino",
+        "country": "Sudáfrica",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 53.38939,
+        "lng": 11.68324,
+        "name": "Parque EcoVida",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.43331,
+        "lng": 137.6769,
+        "name": "Bosque Verde",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -27.39853,
+        "lng": 135.22352,
+        "name": "Parque Amazonas",
+        "country": "Australia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 37.67938,
+        "lng": 137.16276,
+        "name": "Refugio Verde",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 56.33143,
+        "lng": -108.46272,
+        "name": "Reserva Andino",
+        "country": "Canadá",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -36.69559,
+        "lng": -65.62619,
+        "name": "Parque Verde",
+        "country": "Argentina",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.04448,
+        "lng": 140.83151,
+        "name": "Parque EcoVida",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -12.0677,
+        "lng": -74.77592,
+        "name": "Reserva Esperanza",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -7.63227,
+        "lng": -52.71611,
+        "name": "Parque EcoVida",
+        "country": "Brasil",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 57.02889,
+        "lng": -103.27683,
+        "name": "Bosque Pacífico",
+        "country": "Canadá",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 52.40537,
+        "lng": -3.09567,
+        "name": "Reserva Esperanza",
+        "country": "Reino Unido",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 53.35781,
+        "lng": -5.07725,
+        "name": "Reserva Andino",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 61.8767,
+        "lng": 104.62358,
+        "name": "Reserva Solar",
+        "country": "Rusia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 4.70561,
+        "lng": -75.71219,
+        "name": "Santuario Pacífico",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 39.63656,
+        "lng": -92.90123,
+        "name": "Bosque Pacífico",
+        "country": "Estados Unidos",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -10.94026,
+        "lng": -74.96439,
+        "name": "Reserva Selva",
+        "country": "Perú",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -26.3246,
+        "lng": 136.53709,
+        "name": "Parque EcoVida",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 5.9434,
+        "lng": -73.06099,
+        "name": "Bosque Verde",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 38.90192,
+        "lng": 139.36174,
+        "name": "Bosque Esperanza",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 40.03257,
+        "lng": 11.12866,
+        "name": "Santuario Selva",
+        "country": "Italia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 39.85584,
+        "lng": -6.10296,
+        "name": "Reserva Verde",
+        "country": "España",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 40.59707,
+        "lng": -6.17732,
+        "name": "Bosque Esperanza",
+        "country": "España",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -10.74911,
+        "lng": -52.96008,
+        "name": "Parque Esperanza",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -33.62542,
+        "lng": -68.84273,
+        "name": "Refugio Verde",
+        "country": "Chile",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.74256,
+        "lng": 0.73307,
+        "name": "Bosque Amazonas",
+        "country": "Francia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -16.83667,
+        "lng": -67.43747,
+        "name": "Parque Pacífico",
+        "country": "Bolivia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -12.92382,
+        "lng": -52.39312,
+        "name": "Santuario Solar",
+        "country": "Brasil",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 57.06196,
+        "lng": -107.9659,
+        "name": "Santuario Andino",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 55.70744,
+        "lng": -103.83686,
+        "name": "Refugio Esperanza",
+        "country": "Canadá",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 62.99307,
+        "lng": 102.43506,
+        "name": "Parque Esperanza",
+        "country": "Rusia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 52.5983,
+        "lng": -1.61655,
+        "name": "Refugio Solar",
+        "country": "Reino Unido",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 43.74375,
+        "lng": 0.69795,
+        "name": "Reserva Solar",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 44.87278,
+        "lng": 9.79324,
+        "name": "Refugio Esperanza",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -22.66355,
+        "lng": 131.96906,
+        "name": "Refugio Esperanza",
+        "country": "Australia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 43.27977,
+        "lng": 2.52861,
+        "name": "Refugio Pacífico",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -15.53546,
+        "lng": -64.29542,
+        "name": "Santuario Pacífico",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 33.42766,
+        "lng": 100.15962,
+        "name": "Bosque Amazonas",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -37.29093,
+        "lng": -63.11343,
+        "name": "Reserva Esperanza",
+        "country": "Argentina",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 22.41382,
+        "lng": -104.10869,
+        "name": "Reserva Selva",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -30.65441,
+        "lng": -72.33605,
+        "name": "Santuario EcoVida",
+        "country": "Chile",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -37.96507,
+        "lng": -64.09149,
+        "name": "Parque EcoVida",
+        "country": "Argentina",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 53.05698,
+        "lng": 12.27523,
+        "name": "Refugio Esperanza",
+        "country": "Alemania",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 53.25126,
+        "lng": 9.24064,
+        "name": "Parque Solar",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -35.4107,
+        "lng": -72.23921,
+        "name": "Santuario Andino",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -23.58417,
+        "lng": 135.3961,
+        "name": "Santuario Solar",
+        "country": "Australia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 7.4554,
+        "lng": -73.7754,
+        "name": "Parque Esperanza",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 23.81394,
+        "lng": -104.29162,
+        "name": "Santuario Esperanza",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 25.39168,
+        "lng": -104.29282,
+        "name": "Refugio Pacífico",
+        "country": "México",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 22.66265,
+        "lng": -104.15897,
+        "name": "Refugio EcoVida",
+        "country": "México",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -7.026,
+        "lng": -73.094,
+        "name": "Reserva Esperanza",
+        "country": "Perú",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -11.87007,
+        "lng": -74.96034,
+        "name": "Santuario Andino",
+        "country": "Perú",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -7.46905,
+        "lng": -73.55872,
+        "name": "Refugio Pacífico",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -35.32886,
+        "lng": -71.94099,
+        "name": "Bosque Andino",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -16.77004,
+        "lng": -65.88633,
+        "name": "Bosque Esperanza",
+        "country": "Bolivia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -23.60526,
+        "lng": 130.88535,
+        "name": "Parque Andino",
+        "country": "Australia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 6.40334,
+        "lng": -75.98847,
+        "name": "Santuario Selva",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 52.62052,
+        "lng": 9.59233,
+        "name": "Refugio Solar",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 46.65429,
+        "lng": 2.69765,
+        "name": "Parque Andino",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -10.48851,
+        "lng": -72.11217,
+        "name": "Parque Andino",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 6.25138,
+        "lng": -76.50563,
+        "name": "Refugio Verde",
+        "country": "Colombia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 40.65615,
+        "lng": -1.83428,
+        "name": "Bosque Solar",
+        "country": "España",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 40.53989,
+        "lng": -3.88762,
+        "name": "Reserva Verde",
+        "country": "España",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -31.21782,
+        "lng": -71.76531,
+        "name": "Parque Solar",
+        "country": "Chile",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 5.96235,
+        "lng": -74.94493,
+        "name": "Santuario Verde",
+        "country": "Colombia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 24.58455,
+        "lng": -103.07586,
+        "name": "Reserva Selva",
+        "country": "México",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 37.27445,
+        "lng": -5.64296,
+        "name": "Bosque Amazonas",
+        "country": "España",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.51608,
+        "lng": 138.92291,
+        "name": "Reserva Esperanza",
+        "country": "Japón",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 36.59275,
+        "lng": -97.02051,
+        "name": "Bosque EcoVida",
+        "country": "Estados Unidos",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 48.63315,
+        "lng": 8.1702,
+        "name": "Bosque Selva",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 39.83847,
+        "lng": 14.46595,
+        "name": "Reserva Amazonas",
+        "country": "Italia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -10.87773,
+        "lng": -77.20255,
+        "name": "Parque Esperanza",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 20.54771,
+        "lng": -102.99664,
+        "name": "Bosque EcoVida",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 22.57645,
+        "lng": -103.96553,
+        "name": "Refugio Pacífico",
+        "country": "México",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 62.69705,
+        "lng": 102.69771,
+        "name": "Refugio Selva",
+        "country": "Rusia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 34.59397,
+        "lng": 137.6817,
+        "name": "Refugio EcoVida",
+        "country": "Japón",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 42.98391,
+        "lng": -3.77139,
+        "name": "Reserva Pacífico",
+        "country": "España",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 56.2044,
+        "lng": -3.75799,
+        "name": "Reserva Solar",
+        "country": "Reino Unido",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -16.3502,
+        "lng": -62.3392,
+        "name": "Refugio Solar",
+        "country": "Bolivia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 2.78699,
+        "lng": -75.63392,
+        "name": "Bosque Esperanza",
+        "country": "Colombia",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 35.157,
+        "lng": 100.66728,
+        "name": "Santuario Andino",
+        "country": "China",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -12.13809,
+        "lng": -72.70884,
+        "name": "Bosque Selva",
+        "country": "Perú",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 6.21214,
+        "lng": -74.95241,
+        "name": "Refugio Pacífico",
+        "country": "Colombia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -9.85438,
+        "lng": -73.39394,
+        "name": "Bosque Solar",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 40.07308,
+        "lng": -1.48306,
+        "name": "Santuario Solar",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 51.89338,
+        "lng": 10.11727,
+        "name": "Reserva Pacífico",
+        "country": "Alemania",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 55.9056,
+        "lng": -103.79235,
+        "name": "Bosque Selva",
+        "country": "Canadá",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 41.89806,
+        "lng": 14.86541,
+        "name": "Reserva Esperanza",
+        "country": "Italia",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 36.63432,
+        "lng": 100.18857,
+        "name": "Reserva Solar",
+        "country": "China",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -31.14228,
+        "lng": -72.26777,
+        "name": "Reserva Solar",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -32.76153,
+        "lng": -71.23736,
+        "name": "Santuario Selva",
+        "country": "Chile",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": 19.6564,
+        "lng": 78.54719,
+        "name": "Refugio Solar",
+        "country": "India",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -28.50191,
+        "lng": 21.31638,
+        "name": "Reserva Andino",
+        "country": "Sudáfrica",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -9.21363,
+        "lng": -77.74986,
+        "name": "Santuario Andino",
+        "country": "Perú",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 43.81498,
+        "lng": 2.01955,
+        "name": "Santuario Pacífico",
+        "country": "Francia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -33.4448,
+        "lng": -74.44786,
+        "name": "Refugio Selva",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 35.36029,
+        "lng": -95.63422,
+        "name": "Parque Andino",
+        "country": "Estados Unidos",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 56.82801,
+        "lng": -104.90298,
+        "name": "Bosque Amazonas",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 46.22913,
+        "lng": 2.72318,
+        "name": "Bosque Pacífico",
+        "country": "Francia",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -35.52888,
+        "lng": -68.6849,
+        "name": "Refugio Verde",
+        "country": "Chile",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 25.39275,
+        "lng": -99.7741,
+        "name": "Refugio Esperanza",
+        "country": "México",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 54.90695,
+        "lng": -106.65812,
+        "name": "Bosque Solar",
+        "country": "Canadá",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -31.62171,
+        "lng": -72.69543,
+        "name": "Reserva Selva",
+        "country": "Chile",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 55.35935,
+        "lng": -104.70704,
+        "name": "Parque Verde",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 38.49885,
+        "lng": -96.4281,
+        "name": "Reserva Esperanza",
+        "country": "Estados Unidos",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 48.53076,
+        "lng": 10.06523,
+        "name": "Refugio Pacífico",
+        "country": "Alemania",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 54.34807,
+        "lng": -106.37014,
+        "name": "Reserva Verde",
+        "country": "Canadá",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": -9.25947,
+        "lng": -77.08326,
+        "name": "Parque EcoVida",
+        "country": "Perú",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -18.97526,
+        "lng": -64.51941,
+        "name": "Bosque Solar",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 37.69015,
+        "lng": 138.31985,
+        "name": "Parque Pacífico",
+        "country": "Japón",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": 40.4603,
+        "lng": -4.4204,
+        "name": "Santuario Esperanza",
+        "country": "España",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -35.59195,
+        "lng": -71.70942,
+        "name": "Bosque Andino",
+        "country": "Chile",
+        "type": "Parque Nacional"
+    },
+    {
+        "lat": -35.87782,
+        "lng": -61.78735,
+        "name": "Parque Andino",
+        "country": "Argentina",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 58.67395,
+        "lng": -104.43135,
+        "name": "Refugio Andino",
+        "country": "Canadá",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 23.54279,
+        "lng": -99.63957,
+        "name": "Parque EcoVida",
+        "country": "México",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 38.66663,
+        "lng": -1.94466,
+        "name": "Parque Esperanza",
+        "country": "España",
+        "type": "Refugio de Vida Silvestre"
+    },
+    {
+        "lat": -29.28972,
+        "lng": 20.20488,
+        "name": "Refugio EcoVida",
+        "country": "Sudáfrica",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -25.88787,
+        "lng": 134.06873,
+        "name": "Bosque Selva",
+        "country": "Australia",
+        "type": "Reserva Biológica"
+    },
+    {
+        "lat": 51.44235,
+        "lng": 10.36372,
+        "name": "Refugio Amazonas",
+        "country": "Alemania",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -23.17227,
+        "lng": 135.44471,
+        "name": "Parque Andino",
+        "country": "Australia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -9.74935,
+        "lng": -55.66877,
+        "name": "Parque Solar",
+        "country": "Brasil",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -10.16162,
+        "lng": -77.9395,
+        "name": "Parque Amazonas",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 37.01014,
+        "lng": 140.26595,
+        "name": "Reserva Verde",
+        "country": "Japón",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": 21.25919,
+        "lng": 76.21744,
+        "name": "Bosque Pacífico",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": -6.47318,
+        "lng": -73.06392,
+        "name": "Santuario Verde",
+        "country": "Perú",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 1.66352,
+        "lng": -75.69674,
+        "name": "Refugio Amazonas",
+        "country": "Colombia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 20.09473,
+        "lng": 77.58752,
+        "name": "Reserva Andino",
+        "country": "India",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 39.75977,
+        "lng": -3.91921,
+        "name": "Refugio Solar",
+        "country": "España",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 43.57158,
+        "lng": 14.89968,
+        "name": "Bosque Andino",
+        "country": "Italia",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": 55.76062,
+        "lng": -108.26222,
+        "name": "Refugio Esperanza",
+        "country": "Canadá",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 17.72249,
+        "lng": 77.47194,
+        "name": "Refugio Andino",
+        "country": "India",
+        "type": "Área de Conservación"
+    },
+    {
+        "lat": -25.18014,
+        "lng": 131.61536,
+        "name": "Reserva Esperanza",
+        "country": "Australia",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": -39.85126,
+        "lng": -64.28613,
+        "name": "Refugio Pacífico",
+        "country": "Argentina",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": 37.40783,
+        "lng": 140.59528,
+        "name": "Parque EcoVida",
+        "country": "Japón",
+        "type": "Bosque Protegido"
+    },
+    {
+        "lat": -16.88779,
+        "lng": -64.24426,
+        "name": "Reserva Andino",
+        "country": "Bolivia",
+        "type": "Ecoparque"
+    },
+    {
+        "lat": -15.6562,
+        "lng": -62.66049,
+        "name": "Santuario Esperanza",
+        "country": "Bolivia",
+        "type": "Santuario Ecológico"
+    },
+    {
+        "lat": 17.73769,
+        "lng": 77.38424,
+        "name": "Refugio EcoVida",
+        "country": "India",
+        "type": "Reserva Natural"
+    },
+    {
+        "lat": 60.39893,
+        "lng": 104.15382,
+        "name": "Bosque Andino",
+        "country": "Rusia",
+        "type": "Santuario Ecológico"
+    }
+]
