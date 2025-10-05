@@ -1,0 +1,13 @@
+# Entorno Virtual
+.venv/
+__pycache__/
+
+# Archivos de configuración de entorno
+.env
+*.cfg
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+
+# Archivos específicos de Python
+*.pyc
