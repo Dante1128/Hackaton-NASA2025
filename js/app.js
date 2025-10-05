@@ -41,7 +41,7 @@ async function initializeApp() {
     console.log('Aplicación inicializada correctamente');
 }
 
-// Iniciar cuando el DOM esté listo
+// Iniciar cuando el DOM esté listo ewe
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
